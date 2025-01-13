@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">펫키퍼 가입</h3>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="sign-area">
+                    <h2>소중한 우리아이의 <b class="text-primary">건강과 안전</b><br>펫키퍼와 함께해 보세요</h2>
+                    <div class="sign-img primary">
+                        <img src="img/sign/sign-img-02.svg" alt="소중한 우리아이의 건강과 안전 관련 이미지">
+                    </div>
+                </div>
+            </section>
+            <section class="btn-group bottom">
+                <button type="button" class="btn btn-primary btn-lg open-modal" data-modal-id="termsModal">펫키퍼
+                    (유료)가입</button>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-wrap modal-bottom slide-up" id="termsModal">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-topbar"></div>
+                <div class="modal-body">
+                    <div class="terms-cont">
+                        <div class="terms-cont-top">
+                            <h2>가입을 위한 동의가 필요해요</h2>
+                            <h6>전체동의는 선택목적에 대한 동의를 포함하고<br>
+                                있으며, 선택목적에 대한 동의를 거부해도<br>
+                                서비스 이용이 가능해요</h6>
+                        </div>
+                        <div class="terms-cont-body">
+                            <div class="check-group outline">
+                                <input type="checkbox" id="chkAll">
+                                <label for="chkAll">
+                                    <span class="text">전체동의</span>
+                                </label>
+                            </div>
+                            <div class="check-wrap">
+                                <div class="check-group">
+                                    <input type="checkbox" id="chk" class="terms-essential">
+                                    <label for="chk">
+                                        <span class="text">[필수] 서비스 이용약관(유료)</span>
+                                    </label>
+                                    <a href="0_공통_회원가입_유료_서비스이용약관.html" class="check-link">
+                                        <img src="img/ico/i-check-link.svg" alt="약관 상세보기">
+                                    </a>
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" id="chk01" class="terms-essential">
+                                    <label for="chk01">
+                                        <span class="text">[필수] 개인정보 처리 방침</span>
+                                    </label>
+                                    <a href="0_공통_회원가입_유료_개인정보처리방침.html" class="check-link">
+                                        <img src="img/ico/i-check-link.svg" alt="약관 상세보기">
+                                    </a>
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" id="chk02" class="terms-essential">
+                                    <label for="chk02">
+                                        <span class="text">[필수] 개인정보수집 및 제3자 정보제공</span>
+                                    </label>
+                                    <a href="0_공통_회원가입_유료_개인정보수집및제3자정보제공.html" class="check-link">
+                                        <img src="img/ico/i-check-link.svg" alt="약관 상세보기">
+                                    </a>
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" id="chk03" class="terms-essential">
+                                    <label for="chk03">
+                                        <span class="text">[필수] 개인정보수집 및 이용동의</span>
+                                    </label>
+                                    <a href="0_공통_회원가입_유료_개인정보수집및이용동의.html" class="check-link">
+                                        <img src="img/ico/i-check-link.svg" alt="약관 상세보기">
+                                    </a>
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" id="chk04">
+                                    <label for="chk04">
+                                        <span class="text">[선택] 마케팅 수신동의</span>
+                                    </label>
+                                    <a href="0_공통_회원가입_유료_마케팅수신동의.html" class="check-link">
+                                        <img src="img/ico/i-check-link.svg" alt="약관 상세보기">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="btn-group column btn-space-sm">
+                            <button type="submit" class="btn btn-primary btn-lg">동의하고 다음</button>
+                            <a href="#" class="btn-link btn-lg btn-modal-close">닫기</a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

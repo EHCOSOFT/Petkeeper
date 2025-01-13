@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petkeeper</title>
+    <link rel="stylesheet" href="css/codinglist.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>Petkeeper</h1>
+        </header>
+
+        <div class="main">
+            <div class="top_bar">
+                <div class="count">
+                    <ul>
+                        <li>전체: <i>0</i>건</li>
+                        <li>진행중: <i class="orange">0</i>건<span>(0%)</span></li>
+                        <li>완료: <i class="blue">0</i>건<span>(0%)</span></li>
+                        <li>보류: <i class="grey">0</i>건(0%)</li>
+                        <li>제외: <i class="grey">0</i>건(0%)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="table_base">
+                <table id="publishingTable">
+                    <caption>퍼블리싱 리스트</caption>
+                    <thead>
+                        <tr>
+                            <th>NO.</th>
+                            <th>진행상태</th>
+                            <th>화면_ID</th>
+                            <th>구분</th>
+                            <th>화면명</th>
+                            <th>담당자</th>
+                            <th>완료</th>
+                            <th>(재)작업일</th>
+                            <th>개발일</th>
+                            <th>파일명</th>
+                            <th>비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td class="orange">진행중</td>
+                            <td></td>
+                            <td>공통</td>
+                            <td class="ta_l"></td>
+                            <td>김선우</td>
+                            <td>-</td>
+                            <td></td>
+                            <td></td>
+                            <td class="ta_l"><a href="common-components.html">common-components.html</a></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var inProgressCount = 0;
+            var completedCount = 0;
+
+            function updateCaseCounts() {
+                var totalCount = $('#publishingTable tbody tr:not(:first-child)').length;
+                var inProgressPercentage = totalCount > 0 ? ((inProgressCount / totalCount) * 100).toFixed(2) : 0;
+                var completedPercentage = totalCount > 0 ? ((completedCount / totalCount) * 100).toFixed(2) : 0;
+
+
+                $('.count li:contains("전체") i').text(totalCount);
+                $('.count li:contains("진행중") i').text(inProgressCount);
+                $('.count li:contains("완료") i').text(completedCount);
+
+                $('.count li:contains("진행중") span').text('(' + inProgressPercentage + '%)');
+                $('.count li:contains("완료") span').text('(' + completedPercentage + '%)');
+            }
+
+            function updateTotalCount() {
+                var totalCount = $('#publishingTable tbody tr').length;
+                $('.count li:contains("전체") i').text(totalCount);
+            }
+
+            function addRow(data) {
+                var rowCount = $('#publishingTable tbody tr').length;
+                var newRow = $('<tr></tr>');
+
+                newRow.append('<td>' + rowCount + '</td>');
+
+                $.each(data, function (index, item) {
+                    var cell = $('<td></td>');
+                    if (index === 0) {
+                        if (item.toLowerCase() === '진행중') {
+                            cell.addClass('orange');
+                            inProgressCount++;
+                        } else if (item.toLowerCase() === '완료') {
+                            cell.addClass('blue');
+                            completedCount++;
+                        }
+                    }
+                    if (index === 8 || index === 9) {
+                        cell.html(item);
+                    } else {
+                        cell.text(item);
+                    }
+                    newRow.append(cell);
+                });
+
+                $('#publishingTable tbody').append(newRow);
+                updateCaseCounts();
+                updateTotalCount();
+            }
+
+            // addRow(['진행중', 'PI.1.1.2', '메인_반려동물 정보 불러오기>등록내역 조회(조회 가능)', '반려동물 등록_등록내역 조회(조회 가능) ', '김선우', '2024-04-10', '', '', '<a href="기타_이용약관.html">기타_이용약관.html</a>', '']);  
+            addRow(['완료', '0_공통', '회원가입>무료', '회원가입', '김선우', '2025-01-10', '2025-01-13', '', '<a href="0_공통_회원가입_무료.html">0_공통_회원가입_무료.html</a>', '']); 
+            addRow(['완료', '0_공통', '회원가입>무료>서비스이용약관', '서비스이용약관', '김선우', '2025-01-13', '', '', '<a href="0_공통_회원가입_무료_서비스이용약관.html">0_공통_회원가입_무료_서비스이용약관.html</a>', '']);  
+            addRow(['완료', '0_공통', '회원가입>무료>개인정보처리방침', '개인정보처리방침', '김선우', '2025-01-13', '', '', '<a href="0_공통_회원가입_무료_개인정보처리방침.html">0_공통_회원가입_무료_개인정보처리방침.html</a>', '']); 
+            addRow(['완료', '0_공통', '회원가입>무료>개인정보수집 및 제3자 정보제공', '개인정보수집 및 제3자 정보제공', '김선우', '2025-01-13', '', '', '<a href="0_공통_회원가입_무료_개인정보수집및제3자정보제공.html">0_공통_회원가입_무료_개인정보수집및제3자정보제공.html</a>', '']);
+            addRow(['완료', '0_공통', '회원가입>무료>개인정보수집 및 이용동의', '개인정보처리방침', '김선우', '2025-01-13', '', '', '<a href="0_공통_회원가입_무료_개인정보수집및이용동의.html">0_공통_회원가입_무료_개인정보수집및이용동의.html</a>', '']);  
+            addRow(['완료', '0_공통', '회원가입>무료>마케팅수신동의', '마케팅수신동의', '김선우', '2025-01-13', '', '', '<a href="0_공통_회원가입_무료_마케팅수신동의.html">0_공통_회원가입_무료_마케팅수신동의.html</a>', '']);  
+            addRow(['완료', '0_공통', '회원가입>유료', '회원가입', '김선우', '2025-01-10', '2025-01-13', '', '<a href="0_공통_회원가입_유료.html">0_공통_회원가입_유료.html</a>', '']);
+            addRow(['완료', '0_공통', '회원가입>유료>서비스이용약관', '서비스이용약관', '김선우', '2025-01-13', '', '', '<a href="0_공통_회원가입_유료_서비스이용약관.html">0_공통_회원가입_유료_서비스이용약관.html</a>', '']);  
+            addRow(['완료', '0_공통', '회원가입>유료>개인정보처리방침', '개인정보처리방침', '김선우', '2025-01-13', '', '', '<a href="0_공통_회원가입_유료_개인정보처리방침.html">0_공통_회원가입_유료_개인정보처리방침.html</a>', '']); 
+            addRow(['완료', '0_공통', '회원가입>유료>개인정보수집 및 제3자 정보제공', '개인정보수집 및 제3자 정보제공', '김선우', '2025-01-13', '', '', '<a href="0_공통_회원가입_유료_개인정보수집및제3자정보제공.html">0_공통_회원가입_유료_개인정보수집및제3자정보제공.html</a>', '']);
+            addRow(['완료', '0_공통', '회원가입>유료>개인정보수집 및 이용동의', '개인정보처리방침', '김선우', '2025-01-13', '', '', '<a href="0_공통_회원가입_유료_개인정보수집및이용동의.html">0_공통_회원가입_유료_개인정보수집및이용동의.html</a>', '']);  
+            addRow(['완료', '0_공통', '회원가입>유료>마케팅수신동의', '마케팅수신동의', '김선우', '2025-01-13', '', '', '<a href="0_공통_회원가입_유료_마케팅수신동의.html">0_공통_회원가입_유료_마케팅수신동의.html</a>', '']);  
+            addRow(['완료', '0_공통', '서비스소개', '서비스소개', '김선우', '2025-01-10', '', '', '<a href="0_공통_서비스소개.html">0_공통_서비스소개.html</a>', '']);   
+        });
+    </script>
+</body>
+
+
+</html>
