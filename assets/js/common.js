@@ -68,28 +68,34 @@ $(document).ready(function () {
 
     /**** 약관 전체 동의 체크박스 클릭 이벤트 ****/
     $("#chkAll").click(function () {
+        // 약관 전체 동의 체크박스의 상태를 가져옴
         var isChecked = $(this).prop("checked");
+        // 아래에 있는 모든 체크박스의 상태를 약관 전체 동의 체크박스와 동일하게 설정
+        $(".check-group input[type='checkbox']").prop("checked", isChecked);
+    });
+    // $("#chkAll").click(function () {
+    //     var isChecked = $(this).prop("checked");
 
-        $(".check-group input[type='checkbox']").each(function () {
-            if ($(this).hasClass("terms-essential")) {
-                if (!isChecked) {
-                    $(this).prop("checked", true);
-                    showToast("꼭 동의해야 하는 항목이에요");
-                } else {
-                    $(this).prop("checked", true);
-                }
-            } else {
-                $(this).prop("checked", isChecked);
-            }
-        });
-    });
+    //     $(".check-group input[type='checkbox']").each(function () {
+    //         if ($(this).hasClass("terms-essential")) {
+    //             if (!isChecked) {
+    //                 $(this).prop("checked", true);
+    //                 showToast("꼭 동의해야 하는 항목이에요");
+    //             } else {
+    //                 $(this).prop("checked", true);
+    //             }
+    //         } else {
+    //             $(this).prop("checked", isChecked);
+    //         }
+    //     });
+    // });
     
-    $(".check-group input[type='checkbox']").click(function () {
-        if ($(this).hasClass("terms-essential") && !$(this).prop("checked")) {
-            $(this).prop("checked", true);
-            showToast("꼭 동의해야 하는 항목이에요");
-        }
-    });
+    // $(".check-group input[type='checkbox']").click(function () {
+    //     if ($(this).hasClass("terms-essential") && !$(this).prop("checked")) {
+    //         $(this).prop("checked", true);
+    //         showToast("꼭 동의해야 하는 항목이에요");
+    //     }
+    // });
 
     /**** Bottom Sheet ****/
     var triggerHeight = 600; // 특정 px 값 설정
