@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">반려동물 등록</h3>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="reg-area">
+                    <div class="reg-title-group">
+                        <h1>동물번호를 입력하여<br>등록된 정보를 조회할 수 있어요</h1>
+                    </div>
+                    <div class="input-wrap">
+                        <div class="input-group error">
+                            <label for="">등록자 이름</label>
+                            <div class="input-group-field">
+                                <input type="text" value="홍길동" disabled>
+                            </div>
+                        </div>
+                        <div class="input-group error">
+                            <label for="">국가등록번호<span>*</span></label>
+                            <div class="input-group-field">
+                                <div class="input-field-number">
+                                    <input type="number" placeholder="15자리 숫자를 입력해주세요">
+                                    <span><b>0</b>/15</span>
+                                </div>
+                                <a href="#">등록번호를 잊으셨나요?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="btn-group bottom">
+                <button type="button" class="btn btn-primary btn-lg" disabled>조회하기</button>
+            </section>
+        </main>
+    </div>
+
+    <div class="loading show">
+        <img src="img/ico/i-loading.svg" alt="조회중">
+        <p>동물등록 정보를 조회하고 있어요<br>
+            잠시만 기다려주세요</p>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

@@ -89,7 +89,7 @@ $(document).ready(function () {
     //         }
     //     });
     // });
-    
+
     // $(".check-group input[type='checkbox']").click(function () {
     //     if ($(this).hasClass("terms-essential") && !$(this).prop("checked")) {
     //         $(this).prop("checked", true);
@@ -123,4 +123,79 @@ $(document).ready(function () {
         isClosed = true; // .bottom-sheet-close 클릭 상태로 설정
     });
 
+    // 버튼 클릭 시 파일 입력 요소를 클릭하도록 처리
+    $('.profile-upload-btn').on('click', function () {
+        $('.profile-upload').click();
+    });
+
+    // 파일 입력 요소의 change 이벤트 처리
+    $('.profile-upload').on('change', function (event) {
+        const file = event.target.files[0]; // 선택한 파일 가져오기
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                // .profile 내부의 모든 자식 요소 제거
+                $('.profile').empty();
+
+                // .profile 요소의 배경 이미지 설정
+                $('.profile').css({
+                    background: `url(${e.target.result}) no-repeat center center`, // 배경 이미지 설정
+                    'background-size': 'cover', // 배경 이미지를 컨테이너에 맞게 조정
+                });
+            };
+
+            // 파일을 데이터 URL로 읽기
+            reader.readAsDataURL(file);
+        }
+    });
+
+    $('.input-group-field.decimal input').on('blur', function () {
+        let value = parseFloat($(this).val()); // 입력 값을 숫자로 변환
+        if (!isNaN(value)) {
+            $(this).val(value.toFixed(2)); // 소수점 둘째 자리까지 표시
+        }
+    });
+
+    $('.address-detail').click(function () {
+        const $this = $(this); // 클릭된 요소를 참조
+        const $nextElement = $this.next('ul'); // 다음 요소 (ul)
+
+        if ($this.hasClass('active')) {
+            // 이미 열려 있는 경우
+            $this.removeClass('active'); // 활성화 클래스 제거
+            $nextElement.stop().slideUp(300).removeClass('show'); // 슬라이드 업 및 클래스 제거
+        } else {
+            // 닫혀 있는 경우
+            $this.addClass('active'); // 활성화 클래스 추가
+            $nextElement.stop().slideDown(300).addClass('show'); // 슬라이드 다운 및 클래스 추가
+        }
+    });
+
+    // .header-main이 있는 .header 요소를 저장
+    const $header = $('.header.header-main');
+
+    // 스크롤 이벤트 처리
+    $(window).on('scroll', function () {
+        const scrollTop = $(this).scrollTop(); // 현재 스크롤 위치
+
+        if (scrollTop > 56) {
+            // 스크롤이 56px 이상일 때
+            if ($header.hasClass('header-main')) {
+                $header.removeClass('header-main'); // .header-main 제거
+            }
+        } else {
+            // 스크롤이 0px일 때
+            if (!$header.hasClass('header-main')) {
+                $header.addClass('header-main'); // .header-main 복원
+            }
+        }
+    });
+
+    const mainSwiper = new Swiper(".main-swiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
 });

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">반려동물 등록</h3>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="reg-area">
+                    <div class="input-wrap">
+                        <div class="profile-group">
+                            <label for="profile-picture">프로필 사진</label>
+                            <div class="profile-group-field">
+                                <div class="profile">
+                                    <!-- <div class="dog"></div> -->
+                                    <div class="cat"></div>
+                                </div>
+                                <input type="file" id="profile-picture" accept="image/*" class="profile-upload">
+                                <button type="button" class="profile-upload-btn">
+                                    <img src="img/ico/i-change.svg" alt="변경">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="select-group">
+                            <label for="">등록대상 선택</label>
+                            <div class="select-group-field">
+                                <select name="" id="" disabled>
+                                    <option value="1" selected>초코</option>
+                                    <option value="2">금색</option>
+                                    <option value="3">금색</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="">성별</label>
+                            <div class="input-group-field">
+                                <input type="text" value="남자아이" disabled>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="">국가동물번호</label>
+                            <div class="input-group-field">
+                                <input type="text" value="1234556789012345" disabled>
+                            </div>
+                        </div>
+                        <div class="select-group">
+                            <label for="">품종</label>
+                            <div class="select-group-field">
+                                <select name="" id="" disabled>
+                                    <option value="1">골든리트리버</option>
+                                    <option value="2">골든리트리버</option>
+                                    <option value="3">골든리트리버</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section class="btn-group bottom">
+                <button type="button" class="btn btn-primary btn-lg">확인</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

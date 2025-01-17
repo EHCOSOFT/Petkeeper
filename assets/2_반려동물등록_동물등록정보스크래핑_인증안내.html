@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">반려동물 등록</h3>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="pass-area">
+                    <div class="pass-intro">
+                        <img src="img/pass.svg" alt="패스">
+                        <h1>반려동물 등록번호 조회를 위해<br>PASS로 인증해 주세요</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="btn-group bottom">
+                <button type="button" class="btn btn-primary btn-lg">PASS 인증하기</button>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-wrap active" id="">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-alert">
+                        <h4>등록가능한 반려동물<br>정보가 없어요</h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary btn-lg btn-modal-close">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

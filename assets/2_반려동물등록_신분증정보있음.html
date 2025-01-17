@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">반려동물 등록</h3>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="reg-area">
+                    <div class="reg-title-group">
+                        <h1>동물등록 내역을 가져왔어요</h1>
+                        <h6>펫키퍼에 등록할 반려동물을 선택해주세요</h6>
+                    </div>
+                    <div class="reg-check">
+                        <div class="check-wrap">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk01">
+                                <label for="chk01">
+                                    <!-- background img로 반려동물 이미지가 들어갈 시 자식요소 .dog 제거 -->
+                                    <div class="check-profile">
+                                        <div class="profile sm">
+                                            <div class="dog"></div>
+                                        </div>
+                                        <div class="profile-info">
+                                            <h5>멍멍이</h5>
+                                            <p>그레이트 피레니즈</p>
+                                            <p>123456789012345(중성화 완료)</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="check-group">
+                                <input type="checkbox" id="chk02">
+                                <label for="chk02">
+                                    <!-- background img로 반려동물 이미지가 들어갈 시 자식요소 .dog 제거 -->
+                                    <div class="check-profile">
+                                        <div class="profile sm">
+                                            <div class="cat"></div>
+                                        </div>
+                                        <div class="profile-info">
+                                            <h5>멍멍이이름이너무너무너무길어요</h5>
+                                            <p>그레이트 피레니즈</p>
+                                            <p>123456789012345(중성화 완료)</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="check-group reg-complete">
+                                <input type="checkbox" id="chk03" disabled>
+                                <label for="chk03">
+                                    <!-- background img로 반려동물 이미지가 들어갈 시 자식요소 .dog 제거 -->
+                                    <div class="check-profile">
+                                        <div class="profile sm">
+                                            <div class="dog"></div>
+                                        </div>
+                                        <div class="profile-info complete">
+                                            <h5>멍멍이이름이너무길어요</h5>
+                                            <p>그레이트 피레니즈</p>
+                                            <p>123456789012345(중성화 완료)</p>
+                                            <span class="complete-text">등록완료</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-lg" disabled>선택한 아이 등록하기</button>
+                    </div>
+                    <div class="reg-bottom">
+                        <ul class="reg-link-group">
+                            <li class="link-box">
+                                <a href="#">
+                                    <h6>동물 등록 정보 불러오기</h6>
+                                    <p>국가동물정보시스템에서 등록 정보를 불러올 수 있어요</p>
+                                </a>
+                            </li>
+                            <li class="link-box">
+                                <a href="#">
+                                    <h6>직접입력하기</h6>
+                                    <p>정보를 직접 입력할 수 있어요</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
