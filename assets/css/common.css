@@ -936,6 +936,7 @@ button:not(:disabled) {
     color: var(--color-313D4A-darkgray);
     font-size: var(--font-16-md);
     font-weight: var(--font-400-regular);
+    height: 58px;
     padding: var(--space-16-sm);
     -webkit-appearance: none;
     width: 100%;
