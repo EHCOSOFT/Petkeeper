@@ -198,4 +198,24 @@ $(document).ready(function () {
             el: ".swiper-pagination",
         },
     });
+
+    $('.accordion-header').on('click', function () {
+        // $('.accordion-content').slideUp();
+        // $('.accordion-header').not(this).removeClass('active');
+
+        const content = $(this).next('.accordion-content');
+        if (content.is(':visible')) {
+            content.slideUp();
+            $(this).removeClass('active');
+        } else {
+            content.slideDown();
+            $(this).addClass('active');
+        }
+    });
+
+    const testInfoSwiper = new Swiper(".test-info-swiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
 });

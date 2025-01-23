@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <h3 class="header-title">검사키트 등록방법</h3>
+                <a href="#" class="header-close">
+                    <img src="img/ico/i-header-close.svg" alt="닫기">
+                </a>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main gray">
+            <section class="container">
+                <div class="test-info-area">
+                    <div class="swiper test-info-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- 내부 이미지 미전달 임시 이미지 적용 -->
+                            <div class="swiper-slide">
+                                <img src="img/sample/sample-01.png" alt="등록안내 이미지 01">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/sample/sample-01.png" alt="등록안내 이미지 02">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/sample/sample-01.png" alt="등록안내 이미지 03">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-bottom">
+                <div class="check-group">
+                    <input type="checkbox" id="chk">
+                    <label for="chk">
+                        <span class="text">다시 보지 않기</span>
+                    </label>
+                </div>
+                <section class="btn-group bottom btn-space-xxs last">
+                    <button type="button" class="btn btn-none btn-lg" disabled>이전</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-next">다음</button>
+                </section>
+            </section>
+        </main>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

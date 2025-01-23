@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <h3 class="header-title">진단결과</h3>
+                <a href="#" class="header-close">
+                    <img src="img/ico/i-header-close.svg" alt="닫기">
+                </a>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main gray">
+            <section class="container">
+                <div class="test-result-area">
+                    <div class="test-result-target main-swiper">
+                        <div class="pet-info">
+                            <div class="profile">
+                                <div class="dog"></div>
+                            </div>
+                            <div class="profile-info-detail">
+                                <h5>댕댕이</h5>
+                                <h6>동물등록번호 미등록</h6>
+                                <p>그레이트 피레니즈</p>
+                                <p>10.12kg (중성화완료)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-result">
+                        <div class="test-result-title">
+                            <h3>검진결과</h3>
+                            <p>2024. 10. 15</p>
+                        </div>
+                        <div class="result-detail-box">
+                            <div class="result-detail">
+                                <div class="progress-group green">
+                                    <div class="progress-info">
+                                        <h6>정상(6)</h6>
+                                        <p>우로빌리노겐, 포도당 외 8</p>
+                                    </div>
+                                    <progress max="100" value="60"></progress>
+                                </div>
+                                <div class="progress-group orange">
+                                    <div class="progress-info">
+                                        <h6>의심(4)</h6>
+                                        <p>빌리루빈, 케톤체 외 2</p>
+                                    </div>
+                                    <progress max="100" value="40"></progress>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-result-detail">
+                        <h3>의심</h3>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="doubt">의심</span>
+                                    <h6>빌리루빈</h6>
+                                    <img src="img/ico/i-link.svg" alt="자세히 보기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="doubt">의심</span>
+                                    <h6>케톤체</h6>
+                                    <img src="img/ico/i-link.svg" alt="자세히 보기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="doubt">의심</span>
+                                    <h6>비중</h6>
+                                    <img src="img/ico/i-link.svg" alt="자세히 보기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="doubt">의심</span>
+                                    <h6>잠혈</h6>
+                                    <img src="img/ico/i-link.svg" alt="자세히 보기">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="test-result-detail">
+                        <h3>정상</h3>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="normal">정상</span>
+                                    <h6>우로빌리노겐</h6>
+                                    <img src="img/ico/i-link.svg" alt="자세히 보기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="normal">정상</span>
+                                    <h6>포도당</h6>
+                                    <img src="img/ico/i-link.svg" alt="자세히 보기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="normal">정상</span>
+                                    <h6>pH</h6>
+                                    <img src="img/ico/i-link.svg" alt="자세히 보기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="normal">정상</span>
+                                    <h6>단백질</h6>
+                                    <img src="img/ico/i-link.svg" alt="자세히 보기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="normal">정상</span>
+                                    <h6>아질산염</h6>
+                                    <img src="img/ico/i-link.svg" alt="자세히 보기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="normal">정상</span>
+                                    <h6>백혈구</h6>
+                                    <img src="img/ico/i-link.svg" alt="자세히 보기">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

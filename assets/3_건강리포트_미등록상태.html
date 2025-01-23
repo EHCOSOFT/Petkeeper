@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">펫키퍼</h3>
+                <a href="#" class="header-my">MY</a>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <div class="bg-gray">
+                <section class="container">
+                    <div class="report-area">
+                        <div class="swiper main-swiper report-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="add-pet">
+                                        <h4>동물정보 등록 후 이용할 수 있어요</h4>
+                                        <a href="#" class="btn-add-pet">반려동물정보 등록</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="test-result">
+                            <div class="test-result-title">
+                                <h3>검진결과</h3>
+                            </div>
+                            <div class="accordion-item open">
+                                <div class="blur"></div>
+                                <div class="accordion-header">
+                                    <div class="result-summation">
+                                        <h5>24.09.30</h5>
+                                        <span class="normal">정상(6)</span>
+                                        <span class="doubt">의심(4)</span>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="result-detail-group">
+                                        <div class="result-detail">
+                                            <div class="progress-group green">
+                                                <div class="progress-info">
+                                                    <h6>정상(6)</h6>
+                                                    <p>우로빌리노겐, 포도당 외 8</p>
+                                                </div>
+                                                <progress max="100" value="60"></progress>
+                                            </div>
+                                            <div class="progress-group orange">
+                                                <div class="progress-info">
+                                                    <h6>의심(4)</h6>
+                                                    <p>빌리루빈, 케톤체 외 2</p>
+                                                </div>
+                                                <progress max="100" value="40"></progress>
+                                            </div>
+                                        </div>
+                                        <ul class="result-info">
+                                            <li>※ 질병의 진단은 반드시 전문가와 상의하세요</li>
+                                        </ul>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-outline-primary btn-md">자세히
+                                                보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ai-counsel">
+                            <div class="ai-counsel-title">
+                                <h3>AI 상담내역</h3>
+                            </div>
+                            <div class="ai-counsel-none">
+                                <p>AI 상담내역이 없어요</p>
+                            </div>
+
+                        </div>
+
+                </section>
+                <section class="btn-group bottom">
+                    <button type="button" class="btn btn-black btn-lg">검진결과 등록</button>
+                </section>
+            </div>
+        </main>
+
+
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

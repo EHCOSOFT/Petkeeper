@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <h3 class="header-title">소변검사키트 촬영</h3>
+                <a href="#" class="header-close">
+                    <img src="img/ico/i-header-close.svg" alt="닫기">
+                </a>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main gray">
+            <section class="container">
+                <div class="test-filming-area">
+                    <div class="test-filming-preview" style="background: url(img/sample/sample-01.png); background-size: cover;"></div>
+                    <h2>촬영이 잘 되었나요?<br>이상이 없으면 다음 버튼을 눌러<br>다음 단계로 진행해주세요</h2>
+                </div>
+            </section> 
+            <section class="btn-group bottom btn-space-xxs last">
+                <button type="button" class="btn btn-none btn-lg">재촬영</button>
+                <button type="button" class="btn btn-primary btn-lg btn-next">다음</button>
+            </section>
+        </main>
+    </div>
+
+    <div class="loading show">
+        <img src="img/ico/i-loading.svg" alt="조회중">
+        <p>소변키트 내용을 분석하고 있어요<br>
+            잠시만 기다려주세요</p>
+    </div>
+
+    <div class="modal-wrap">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-alert">
+                        <h4>소변검사키트를<br>다시 촬영해주세요</h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary btn-lg btn-modal-close">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
