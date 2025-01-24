@@ -1895,3 +1895,30 @@
     font-weight: var(--font-400-regular);
     line-height: 20px;
 }
+
+.profile-cont {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8-xxs);
+}
+
+.profile-cont h2 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-title-20-sm);
+    line-height: 32px;
+    text-align: left;
+}
+
+.profile-cont ul {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8-xxs);
+}
+
+.profile-cont ul li a {
+    color: var(--color-54595D-gray);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-400-regular);
+    text-align: left;
+}

@@ -124,32 +124,32 @@ $(document).ready(function () {
     });
 
     // 버튼 클릭 시 파일 입력 요소를 클릭하도록 처리
-    $('.profile-upload-btn').on('click', function () {
-        $('.profile-upload').click();
-    });
+    // $('.profile-upload-btn').on('click', function () {
+    //     $('.profile-upload').click();
+    // });
 
     // 파일 입력 요소의 change 이벤트 처리
-    $('.profile-upload').on('change', function (event) {
-        const file = event.target.files[0]; // 선택한 파일 가져오기
+    // $('.profile-upload').on('change', function (event) {
+    //     const file = event.target.files[0]; // 선택한 파일 가져오기
 
-        if (file) {
-            const reader = new FileReader();
+    //     if (file) {
+    //         const reader = new FileReader();
 
-            reader.onload = function (e) {
-                // .profile 내부의 모든 자식 요소 제거
-                $('.profile').empty();
+    //         reader.onload = function (e) {
+    //             // .profile 내부의 모든 자식 요소 제거
+    //             $('.profile').empty();
 
-                // .profile 요소의 배경 이미지 설정
-                $('.profile').css({
-                    background: `url(${e.target.result}) no-repeat center center`, // 배경 이미지 설정
-                    'background-size': 'cover', // 배경 이미지를 컨테이너에 맞게 조정
-                });
-            };
+    //             // .profile 요소의 배경 이미지 설정
+    //             $('.profile').css({
+    //                 background: `url(${e.target.result}) no-repeat center center`, // 배경 이미지 설정
+    //                 'background-size': 'cover', // 배경 이미지를 컨테이너에 맞게 조정
+    //             });
+    //         };
 
-            // 파일을 데이터 URL로 읽기
-            reader.readAsDataURL(file);
-        }
-    });
+    //         // 파일을 데이터 URL로 읽기
+    //         reader.readAsDataURL(file);
+    //     }
+    // });
 
     $('.input-group-field.decimal input').on('blur', function () {
         let value = parseFloat($(this).val()); // 입력 값을 숫자로 변환

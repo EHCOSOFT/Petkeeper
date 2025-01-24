@@ -37,7 +37,7 @@
                                     <div class="cat"></div>
                                 </div>
                                 <input type="file" id="profile-picture" accept="image/*" class="profile-upload">
-                                <button type="button" class="profile-upload-btn">
+                                <button type="button" class="profile-upload-btn open-modal" data-modal-id="profileModal">
                                     <img src="img/ico/i-change.svg" alt="변경">
                                 </button>
                             </div>
@@ -139,6 +139,25 @@
                 <button type="button" class="btn btn-primary btn-lg">등록하기</button>
             </section>
         </main>
+    </div>
+
+    <div class="modal-wrap modal-bottom slide-up" id="profileModal">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-topbar"></div>
+                <div class="modal-body">
+                    <div class="profile-cont">
+                        <h2>프로필 사진</h2>
+                        <ul>
+                            <li><a href="">사진찍기</a></li>
+                            <li><a href="">사진앨범</a></li>
+                            <li><a href="">사진삭제</a></li>
+                            <li><a href="" class="btn-modal-close">취소</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="lib/jquery.min.js"></script>

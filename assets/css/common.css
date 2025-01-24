@@ -721,7 +721,7 @@ button:not(:disabled) {
 }
 
 .modal-wrap.modal-bottom .modal-content {
-    max-width: calc(100% - var(--space-24-lg));
+    width: calc(100% - var(--space-24-lg));
 }
 
 .modal-wrap.slide-up.active .modal-inner {
