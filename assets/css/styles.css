@@ -2610,6 +2610,7 @@
 
 .adoption-area .link span {
     border-radius: var(--radius-8-sm);
+    font-size: var(--font-13-xxs);
     padding: var(--space-4-min) 0;
     text-align: center;
     width: 60px;
