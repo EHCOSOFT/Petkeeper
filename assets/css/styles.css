@@ -2147,6 +2147,10 @@
     gap: var(--space-24-lg);
 }
 
+.option-cont.space-sm {
+    gap: var(--space-16-sm);
+}
+
 .option-cont h3 {
     color: var(--color-181F27-balck);
     font-size: var(--font-18-lg);
@@ -2242,4 +2246,387 @@
 
 .contact-method li a img {
     width: 20px
+}
+
+.pet-result-list-item.grid {
+    gap: var(--space-8-xxs);
+}
+
+.pet-result-list-item.grid p {
+    color: var(--color-54595D-gray);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-500-medium);
+}
+
+.pet-result-list-item.grid .row-area {
+    display: flex;
+    gap: var(--space-12-xs);
+}
+
+.pet-result-list-item.grid img {
+    flex: 0 0 auto;
+    height: 120px;
+    width: 120px;
+}
+
+.pet-result-list-item.grid .pet-info {
+    justify-content: space-between;
+}
+
+.pet-result-list-item.grid .pet-info h6 {
+    align-items: flex-start;
+}
+
+.pet-result-list-item.grid .pet-info h6::before {
+    flex: 0 0 auto;
+    margin: 3px 0 0 0;
+}
+
+.pet-result-list-item.grid .pet-info p {
+    color: var(--color-54595D-gray);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-400-regular);
+}
+
+.expense {
+    align-items: center;
+    background: var(--color-f5f5f5-gray-rgb);
+    border-radius: var(--radius-16-lg);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-16-sm);
+}
+
+.expense img {
+    width: 48px;
+}
+
+.expense .expense-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.expense .expense-text p {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-400-regular);
+    line-height: 24px;
+}
+
+.expense .expense-text h6 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-700-bold);
+    line-height: 24px;
+}
+
+.pet-hospital-area {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24-lg);
+    margin: var(--space-24-lg) 0;
+}
+
+.pet-hospital-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-32-xl);
+}
+
+.pet-hospital-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.pet-hospital-item img {
+    border-radius: var(--radius-16-lg);
+    object-fit: cover;
+    height: 160px;
+}
+
+.hospital-info {
+    display: flex;
+    flex-direction: column;
+    margin: var(--space-12-xs) 0 var(--space-24-lg) 0;
+}
+
+.hospital-info h4 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-18-lg);
+    font-weight: var(--font-700-bold);
+    line-height: 26px;
+    margin: 0 0 var(--space-4-min) 0;
+}
+
+.hospital-info h5 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-400-regular);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.hospital-info h6 {
+    align-items: center;
+    color: var(--color-54595D-gray);
+    display: flex;
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-400-regular);
+    gap: var(--space-4-min);
+    line-height: 24px;
+}
+
+.hospital-info h6::before {
+    background: url(../img/ico/i-marker.svg);
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+
+.pet-hospital-item .link-group {
+    display: flex;
+    gap: var(--space-8-xxs);
+}
+
+.pet-hospital-item .link-group a {
+    text-align: center;
+}
+
+.pet-hospital-pay {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12-xs);
+    margin: var(--space-24-lg) 0;
+}
+
+.pet-hospital-pay h5 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-18-lg);
+    font-weight: var(--font-700-bold);
+    line-height: 24px;
+}
+
+.start-pay {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12-xs);
+}
+
+.start-pay .pay-top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.start-pay .pay-top ul {
+    align-items: center;
+    display: flex;
+}
+
+.start-pay .pay-top ul li {
+    align-items: center;
+    color: var(--color-54595D-gray);
+    display: flex;
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-400-regular);
+}
+
+.start-pay .pay-top ul li img {
+    margin: 0 var(--space-4-min) 0 0;
+    width: 16px;
+}
+
+.start-pay .pay-top ul li::after {
+    content: '·';
+    margin: 0 var(--space-4-min);
+}
+
+.start-pay .pay-top ul li:last-child::after {
+    display: none;
+}
+
+.start-pay .pay-top .pay-filter {
+    align-items: center;
+    color: var(--color-003595-primary);
+    display: flex;
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-400-regular);
+    gap: var(--space-4-min);
+    line-height: 24px;
+}
+
+.start-pay .pay-top .pay-filter img {
+    width: 20px;
+}
+
+.start-pay .pay-cont {
+    background: var(--color-f5f5f5-gray-rgb);
+    border-radius: var(--radius-16-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16-sm);
+    padding: var(--space-16-sm);
+}
+
+.start-pay .pay-cont .tab-buttons {
+    background: none;
+    position: relative;
+}
+
+.start-pay .pay-cont .tab-link {
+    border: 1px solid transparent;
+    border-radius: var(--radius-8-sm);
+    color: var(--color-B5BAC0-palegray);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-500-medium);
+    padding: var(--space-8-xxs) 0;
+}
+
+.start-pay .pay-cont .tab-link.active {
+    background: var(--color-ffffff-white);
+    border: 1px solid var(--color-181F27-balck);
+    color: var(--color-181F27-balck);
+}
+
+.start-pay .pay-cont .dl-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12-xs);
+}
+
+.start-pay .pay-cont .dl-group dl {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.start-pay .pay-cont .dl-group dt,
+.start-pay .pay-cont .dl-group dd {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-400-regular);
+    line-height: 22px;
+}
+
+.line {
+    background: var(--color-f5f5f5-gray-rgb);
+    height: 12px;
+}
+
+.region-hospital-pay {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12-xs);
+    margin: var(--space-24-lg) 0;
+}
+
+.region-hospital-pay h5 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-18-lg);
+    font-weight: var(--font-700-bold);
+    line-height: 24px;
+}
+
+.region-hospital-pay .dl-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8-xxs);
+}
+
+.region-hospital-pay .dl-group dl {
+    background: var(--color-f5f5f5-gray-rgb);
+    border-radius: var(--radius-12-md);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-16-sm);
+}
+
+.region-hospital-pay .dl-group dt,
+.region-hospital-pay .dl-group dd {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-400-regular);
+    line-height: 22px;
+}
+
+.region-hospital-pay .dl-group dl.active {
+    background: var(--color-FAFCFF-primary-bg);
+}
+
+.region-hospital-pay .dl-group dl.active dt,
+.region-hospital-pay .dl-group dl.active dd {
+    color: var(--color-0046C6-primary-hover);
+}
+
+.adoption-area {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12-xs);
+}
+
+.adoption-area .constant {
+    border: 1px solid var(--color-cccccc-line);
+    border-radius: var(--radius-16-lg);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-20-md);
+    height: 200px;
+}
+
+.adoption-area .constant h3 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-18-lg);
+    font-weight: var(--font-700-bold);
+    line-height: 26px;
+}
+
+.adoption-area .constant h6 {
+    color: var(--color-54595D-gray);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-500-bold);
+    line-height: 20px;
+    margin: var(--space-4-min) 0 0 0;
+}
+
+.adoption-area .constant p {
+    color: var(--color-54595D-gray);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-500-bold);
+    margin: auto 0 0 0;
+}
+
+.adoption-area .link {
+    align-items: center;
+    background: var(--color-f5f5f5-gray-rgb);
+    border-radius: var(--radius-16-lg);
+    display: flex;
+    gap: var(--space-8-xxs);
+    padding: var(--space-16-sm) var(--space-20-md);
+}
+
+
+.adoption-area .link span {
+    border-radius: var(--radius-8-sm);
+    padding: var(--space-4-min) 0;
+    text-align: center;
+    width: 60px;
+}
+
+.adoption-area .link span.progress {
+    background: var(--color-003595-primary);
+    color: var(--color-ffffff-white);
+}
+
+.adoption-area .link span.end {
+    background: var(--color-cccccc-line);
+    color: var(--color-313D4A-darkgray);
+}
+
+.adoption-area .link h6 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-500-medium);
 }

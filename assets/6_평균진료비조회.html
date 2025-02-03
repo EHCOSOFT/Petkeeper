@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">평균 진료비 조회</h3>
+                <a href="#" class="header-my">MY</a>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="pet-hospital-pay">
+                    <h5>초진 진찰료</h5>
+                    <div class="start-pay">
+                        <div class="pay-top">
+                            <ul>
+                                <li><img src="img/ico/i-marker.svg" alt="위치">서울특별시 중구</li>
+                                <li>체중 5kg</li>
+                            </ul>
+                            <a href="javascript:void(0);" class="pay-filter open-modal"
+                                data-modal-id="payFilterModal"><img src="img/ico/i-filter-primary.svg"
+                                    alt="필터 아이콘">필터</a>
+                        </div>
+                        <div class="pay-cont">
+                            <div class="tab-buttons">
+                                <div class="tab-link active">중간비용</div>
+                                <div class="tab-link">최저비용</div>
+                                <div class="tab-link">최고비용</div>
+                                <div class="tab-link">평균비용</div>
+                            </div>
+                            <div class="dl-group">
+                                <dl>
+                                    <dt>전국</dt>
+                                    <dd>10,000원</dd>
+                                </dl>
+                                <dl>
+                                    <dt>서울특별시</dt>
+                                    <dd>10,000원</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <div class="line"></div>
+            <section class="container">
+                <div class="region-hospital-pay">
+                    <h5>지역별 상세 정보</h5>
+                    <div class="dl-group">
+                        <dl>
+                            <dt>종로구</dt>
+                            <dd>10,000원</dd>
+                        </dl>
+                        <dl class="active">
+                            <dt>중구</dt>
+                            <dd>10,000원</dd>
+                        </dl>
+                        <dl>
+                            <dt>용산구</dt>
+                            <dd>10,000원</dd>
+                        </dl>
+                        <dl>
+                            <dt>성동구</dt>
+                            <dd>10,000원</dd>
+                        </dl>
+                        <dl>
+                            <dt>동대문구</dt>
+                            <dd>10,000원</dd>
+                        </dl>
+                        <dl>
+                            <dt>중랑구</dt>
+                            <dd>10,000원</dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-wrap modal-bottom-sheet slide-up input-sm active" id="payFilterModal">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-topbar"></div>
+                <div class="modal-body">
+                    <div class="option-cont space-sm">
+                        <h3>조회설정</h3>
+                        <div class="input-wrap">
+                            <div class="select-group">
+                                <label for="">진료항목</label>
+                                <div class="select-group-field">
+                                    <select name="" id="">
+                                        <option value="1">초진 진찰료</option>
+                                    </select>
+                                    <!-- <small>값이 선택되지 않았습니다.</small> -->
+                                </div>
+                            </div>
+                            <div class="select-group">
+                                <label for="">지역</label>
+                                <div class="select-group-field">
+                                    <select name="" id="">
+                                        <option value="1">서울특별시</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="1">중구</option>
+                                    </select>
+                                    <!-- <small>값이 선택되지 않았습니다.</small> -->
+                                </div>
+                            </div>
+                            <div class="radio-wrap">
+                                <h6>동물구분</h6>
+                                <div class="radio-group-field">
+                                    <div class="radio-group">
+                                        <input type="radio" id="animal01" name="animal">
+                                        <label for="animal01">개</label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input type="radio" id="animal02" name="animal">
+                                        <label for="animal02">고양이</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="radio-wrap">
+                                <h6>구분</h6>
+                                <div class="radio-group-field">
+                                    <div class="radio-group">
+                                        <input type="radio" id="weight01" name="weight">
+                                        <label for="weight01">체중 5kg</label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input type="radio" id="weight02" name="weight">
+                                        <label for="weight02">체중 10kg</label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input type="radio" id="weight03" name="weight">
+                                        <label for="weight03">체중 20kg</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <section class="btn-group btn-space-sm last">
+                            <button type="submit" class="btn btn-primary btn-lg h-sm btn-none btn-modal-close">취소</button>
+                            <button type="submit" class="btn btn-primary btn-lg h-sm">확인</button>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

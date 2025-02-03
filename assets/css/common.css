@@ -565,6 +565,12 @@ button:not(:disabled) {
     opacity: 0.2;
 }
 
+.btn.btn-lightgray {
+    background: var(--color-f5f5f5-gray-rgb);
+    border-color:  var(--color-f5f5f5-gray-rgb);
+    color: var(--color-54595D-gray);
+}
+
 .btn.btn-black {
     background: var(--color-181F27-balck);
     border-color: var(--color-181F27-balck);
@@ -618,6 +624,10 @@ button:not(:disabled) {
     font-size: var(--font-16-md);
     padding: var(--space-16-sm) 0;
     width: 100%;
+}
+
+.btn.btn-lg.h-sm {
+    padding: var(--space-12-xs) 0;
 }
 
 /** 버튼 - 링크 **/
@@ -742,6 +752,8 @@ button:not(:disabled) {
 .modal-wrap.modal-bottom-sheet .modal-content {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    overflow-y: scroll;
+    max-height: 96%;
     padding-top: var(--space-32-xl);
     width: 100%;
 }
@@ -814,6 +826,10 @@ button:not(:disabled) {
     display: flex;
     flex-direction: column;
     gap: var(--space-24-lg);
+}
+
+.input-sm .input-wrap {
+    gap: var(--space-16-sm);
 }
 
 .input-group {
@@ -962,6 +978,7 @@ button:not(:disabled) {
     display: flex;
     flex-direction: column;
     gap: var(--space-12-xs);
+    text-align: left;
 }
 
 .radio-wrap h6 {
@@ -997,6 +1014,10 @@ button:not(:disabled) {
     justify-content: center;
     padding: var(--space-16-sm);
     width: 100%;
+}
+
+.input-sm .radio-group label {
+    padding: var(--space-12-xs) var(--space-16-sm);
 }
 
 .radio-group input:checked+label {
@@ -1104,6 +1125,10 @@ button:not(:disabled) {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+
+.input-sm .select-group select {
+    padding: var(--space-12-xs) var(--space-16-sm);
 }
 
 .select-group select:focus {
