@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">반려동물 찾기</h3>
+                <a href="#" class="header-my">MY</a>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="tab-container">
+                <!-- Tab Buttons -->
+                <div class="tab-buttons">
+                    <div class="tab-link active" data-url="4_반려동물찾기.html">실종동물</div>
+                    <div class="tab-link" data-url="4_반려동물찾기_구조동물.html">구조동물</div>
+                    <div class="tab-link" data-url="4_반려동물찾기_유기동물.html">유기동물</div>
+                </div>
+            </section>
+            <section class="container">
+                <div class="pet-search-area">
+                    <div class="pet-search-top">
+                        <ul>
+                            <li class="active">
+                                <a href="#">전체</a>
+                            </li>
+                            <li>
+                                <a href="#">강아지</a>
+                            </li>
+                            <li>
+                                <a href="#">고양이</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="search-option open-modal" data-modal-id="searchOptionModal">조회설정</a>
+                    </div>
+                    <p class="pet-search-desc"><b>1,920마리</b>의 아이들이 보호자를 기다리고 있어요</p>
+                    <ul class="pet-search-result-list">
+                        <li>
+                            <a href="#" class="pet-result-list-item">
+                                <img src="img/sample/cat-sample.jpg" alt="반려동물 이미지">
+                                <div class="pet-info">
+                                    <h4>고양이를 찾습니다 고양이를 찾습니다 고양이를 찾습니다 고양이를 찾습니다</h4>
+                                    <h6>서울특별시 영등포구 여의도공원</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="pet-result-list-item">
+                                <img src="img/sample/cat-sample.jpg" alt="반려동물 이미지">
+                                <div class="pet-info">
+                                    <h4>고양이를 찾습니다 고양이를 찾습니다 고양이를 찾습니다 고양이를 찾습니다</h4>
+                                    <h6>서울특별시 영등포구 여의도공원</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="pet-result-list-item">
+                                <img src="img/sample/cat-sample.jpg" alt="반려동물 이미지">
+                                <div class="pet-info">
+                                    <h4>고양이를 찾습니다 고양이를 찾습니다 고양이를 찾습니다 고양이를 찾습니다</h4>
+                                    <h6>서울특별시 영등포구 여의도공원</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="pet-result-list-item">
+                                <img src="img/sample/cat-sample.jpg" alt="반려동물 이미지">
+                                <div class="pet-info">
+                                    <h4>고양이를 찾습니다 고양이를 찾습니다 고양이를 찾습니다 고양이를 찾습니다</h4>
+                                    <h6>서울특별시 영등포구 여의도공원</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="pet-result-list-item">
+                                <img src="img/sample/cat-sample.jpg" alt="반려동물 이미지">
+                                <div class="pet-info">
+                                    <h4>고양이를 찾습니다 고양이를 찾습니다 고양이를 찾습니다 고양이를 찾습니다</h4>
+                                    <h6>서울특별시 영등포구 여의도공원</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-wrap modal-bottom-sheet slide-up" id="searchOptionModal">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-topbar"></div>
+                <div class="modal-body">
+                    <div class="option-cont">
+                        <h3>조회설정</h3>
+                        <div class="input-wrap">
+                            <div class="date-group">
+                                <label for="">조회기간<span>*</span></label>
+                                <div class="date-group-area">
+                                    <div class="date-group-field">
+                                        <input type="date">
+                                    </div>
+                                    <span>~</span>
+                                    <div class="date-group-field">
+                                        <input type="date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="select-group">
+                                <label for="">지역<span>*</span></label>
+                                <div class="select-group-field">
+                                    <select name="" id="">
+                                        <option value="1">전체</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="1">전체</option>
+                                    </select>
+                                    <!-- <small>값이 선택되지 않았습니다.</small> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <section class="btn-group btn-space-sm last">
+                            <button type="submit" class="btn btn-primary btn-lg btn-none btn-modal-close">취소</button>
+                            <button type="submit" class="btn btn-primary btn-lg">확인</button>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

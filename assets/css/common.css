@@ -45,6 +45,7 @@
     --color-8B95A1-softgray: #8B95A1;
     --color-B5BAC0-palegray: #B5BAC0;
     --color-f5f5f5-gray-rgb: #f5f5f5;
+    --color-003595-light-primary: rgba(0, 53, 149, 0.05);
     --color-dimmed: rgba(0, 0, 0, .4);
     --color-dimmed-dark: rgba(0, 0, 0, .6);
     --color-shadow: 0px 4px 30px rgba(0, 0, 0, .1);
@@ -492,6 +493,10 @@ button:not(:disabled) {
     padding: var(--space-16-sm) var(--space-24-lg);
 }
 
+.btn-group.border-top {
+    border-top: 1px solid var(--color-cccccc-line);
+}
+
 .btn-group.last>.btn:first-child {
     flex: 0 0 auto;
     width: 100px;
@@ -530,6 +535,12 @@ button:not(:disabled) {
 
 .btn.btn-primary:disabled {
     opacity: 0.2;
+}
+
+.btn.btn-light-primary {
+    background: var(--color-003595-light-primary);
+    border-color: var(--color-003595-light-primary);
+    color: var(--color-003595-primary);
 }
 
 .btn.btn-outline-primary {
@@ -642,7 +653,7 @@ button:not(:disabled) {
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 102;
 }
 
 .modal-wrap.active {
@@ -722,6 +733,17 @@ button:not(:disabled) {
 
 .modal-wrap.modal-bottom .modal-content {
     width: calc(100% - var(--space-24-lg));
+}
+
+.modal-wrap.modal-bottom-sheet .modal-inner {
+    align-items: flex-end;
+}
+
+.modal-wrap.modal-bottom-sheet .modal-content {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-top: var(--space-32-xl);
+    width: 100%;
 }
 
 .modal-wrap.slide-up.active .modal-inner {
@@ -987,6 +1009,7 @@ button:not(:disabled) {
     display: flex;
     flex-direction: column;
     gap: var(--space-12-xs);
+    text-align: left;
 }
 
 .date-group label {
@@ -1000,11 +1023,23 @@ button:not(:disabled) {
     margin: 0 0 0 2px;
 }
 
+.date-group-area {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8-xxs);
+}
+
 .date-group-field {
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: var(--space-8-xxs);
     position: relative;
+}
+
+.date-group-field.row {
+    align-items: center;
+    flex-direction: row;
 }
 
 .date-group input {
@@ -1037,6 +1072,7 @@ button:not(:disabled) {
     display: flex;
     flex-direction: column;
     gap: var(--space-12-xs);
+    text-align: left;
 }
 
 .select-group label {
@@ -1391,5 +1427,46 @@ progress {
 }
 
 .accordion-item.open .accordion-content {
+    display: block;
+}
+
+/* **************************************** *
+ * Tab 
+ * **************************************** */
+.tab-container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 101;
+}
+
+.tab-buttons {
+    background: var(--color-ffffff-white);
+    display: flex;
+}
+
+.tab-buttons .tab-link {
+    border-bottom: 1px solid var(--color-cccccc-line);
+    color: var(--color-8B95A1-softgray);
+    cursor: pointer;
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-500-medium);
+    flex: 1;
+    padding: var(--space-16-sm) 0;
+    line-height: 22px;
+    text-align: center;
+}
+
+.tab-buttons .tab-link.active {
+    border-color: var(--color-181F27-balck);
+    color: var(--color-181F27-balck);
+    font-weight: var(--font-700-bold);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
     display: block;
 }

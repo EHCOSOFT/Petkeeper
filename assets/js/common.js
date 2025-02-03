@@ -218,4 +218,23 @@ $(document).ready(function () {
             el: ".swiper-pagination",
         },
     });
+
+    // tab
+    $(".tab-link").click(function(){
+        var tabID = $(this).data("tab");
+
+        if ($(this).data("url")) {
+            window.location.href = $(this).data("url"); // Redirect to a new page
+        } else {
+            $(".tab-link, .tab-content").removeClass("active");
+            $(this).addClass("active");
+            $("#" + tabID).addClass("active");
+        }
+    });
+
+    const petImgSwiper = new Swiper(".pet-img-swiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
 });

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <h3 class="header-title">실종동물 찾기</h3>
+                <a href="#" class="header-close">
+                    <img src="img/ico/i-header-close.svg" alt="닫기">
+                </a>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="swiper pet-img-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/sample/cat-sample.jpg" alt="반려동물 이미지 01">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/sample/cat-sample.jpg" alt="반려동물 이미지 02">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/sample/cat-sample.jpg" alt="반려동물 이미지 03">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </section>
+            <section class="container">
+                <div class="pet-search-detail-area">
+                    <h5>고양이를 찾아요</h5>
+                    <div class="dl-group">
+                        <dl>
+                            <dt>분실일시</dt>
+                            <dd>2024. 12. 01 18:00</dd>
+                        </dl>
+                        <dl>
+                            <dt>분실장소</dt>
+                            <dd>서울특별시 영등포구 여의도공원</dd>
+                        </dl>
+                        <dl>
+                            <dt>이름</dt>
+                            <dd>댕댕이</dd>
+                        </dl>
+                        <dl>
+                            <dt>털색</dt>
+                            <dd>검은색</dd>
+                        </dl>
+                        <dl>
+                            <dt>중성화</dt>
+                            <dd>중성화 완료</dd>
+                        </dl>
+                        <dl>
+                            <dt>특징</dt>
+                            <dd>얼굴에 큰점</dd>
+                        </dl>
+                        <dl>
+                            <dt>내용</dt>
+                            <dd>여의도 공원 산책하다가 줄을 놓쳤어요.. 너무 빨리 도망가서</dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+            <section class="btn-group bottom border-top">
+                <button type="button" class="btn btn-light-primary btn-lg open-modal" data-modal-id="contactModal">보호자에게 연락하기</button>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-wrap modal-bottom-sheet slide-up" id="contactModal">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-topbar"></div>
+                <div class="modal-body">
+                    <div class="contact-cont">
+                        <h3>보호자에게 연락하기</h3>
+                        <ul class="contact-method">
+                            <li class="call">
+                                <a href="#">
+                                    <img src="img/ico/i-contact-call.svg" alt="전화걸기">
+                                    전화걸기
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/ico/i-contact-message.svg" alt="메시지 보내기">
+                                    메시지 보내기
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/ico/i-contact-message.svg" alt="오픈톡으로 연락하기">
+                                    오픈톡으로 연락하기
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
