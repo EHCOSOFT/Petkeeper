@@ -1913,6 +1913,7 @@
 }
 
 .result-exp-item .accordion-title {
+    color: var(--color-181F27-balck);
     font-size: var(--font-15-sm);
     font-weight: var(--font-500-medium);
     line-height: 22px;
@@ -2725,4 +2726,10 @@
     color: var(--color-181F27-balck);
     font-size: var(--font-16-md);
     font-weight: var(--font-500-medium);
+}
+
+.result-chart {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-14-xs);
+    font-family: var(--font-family);
 }
