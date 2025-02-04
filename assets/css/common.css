@@ -493,6 +493,13 @@ button:not(:disabled) {
     padding: var(--space-16-sm) var(--space-24-lg);
 }
 
+.btn-group.fixed {
+    background: transparent;
+    bottom: 0;
+    position: sticky;
+    width: 100%;
+}
+
 .btn-group.border-top {
     border-top: 1px solid var(--color-cccccc-line);
 }

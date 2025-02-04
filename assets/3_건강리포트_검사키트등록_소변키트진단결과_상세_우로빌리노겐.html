@@ -10,6 +10,7 @@
     <title>Petkeeper</title>
 
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
@@ -57,13 +58,14 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
 
                     <div class="result-explanation">
                         <div class="result-exp-header">
                             <h3>우로빌리노겐이란?</h3>
-                            <h6>우로빌리노겐은 적혈구가 분해될 때 생성되는 빌리루빈이 간에서 처리된 후 일 부가 소변으로 배출되는 물질입니다. 간 기능과 담즙 배출 상태를 반영합니다.</h6>
+                            <h6>우로빌리노겐은 적혈구가 분해될 때 생성되는 빌리루빈이 간에서 처리된 후 일 부가 소변으로 배출되는 물질입니다. 간 기능과 담즙 배출 상태를 반영합니다.
+                            </h6>
                         </div>
                         <div class="result-exp-body">
                             <div class="result-exp-item">
@@ -87,7 +89,7 @@
                                     </div>
                                     <div class="accordion-item">
                                         <div class="accordion-header">
-                                            <div class="accordion-title">용혈성 빈혈(Hemolytic  Anemia)</div>
+                                            <div class="accordion-title">용혈성 빈혈(Hemolytic Anemia)</div>
                                         </div>
                                         <div class="accordion-content">
                                             <p>적혈구가 과도하게 파괴되면서 우로빌리노겐 수치가 높아집니다.</p>
@@ -95,7 +97,7 @@
                                     </div>
                                     <div class="accordion-item">
                                         <div class="accordion-header">
-                                            <div class="accordion-title">담도 폐쇄(Biliary  Obstruction)</div>
+                                            <div class="accordion-title">담도 폐쇄(Biliary Obstruction)</div>
                                         </div>
                                         <div class="accordion-content">
                                             <p>담즙의 흐름이 막혀 우로빌리노겐 수치가 낮거나 아예 검출되지 않을 수 있습니다.</p>
@@ -134,6 +136,16 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="test-result">
+                        <div class="test-result-title">
+                            <h3>검진결과 추이</h3>
+                        </div>
+                        <div class="result-data">
+                            <canvas id="urobilinogenChart" class="result-chart"></canvas>
+                        </div>
+
+                    </div>
                 </div>
             </section>
         </main>
@@ -141,7 +153,72 @@
 
     <script src="lib/jquery.min.js"></script>
     <script src="lib/swiper-bundle.min.js"></script>
+    <script src="lib/chart.js"></script>
     <script src="js/common.js"></script>
+
+    <script>
+        const ctx = document.getElementById('urobilinogenChart').getContext('2d');
+
+        function getRandomDate() {
+            const start = new Date(2023, 0, 1);
+            const end = new Date(2024, 0, 1);
+            return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+        }
+
+        const dates = [
+            "24.02.01",
+            "24.02.02",
+            "24.02.03",
+            "24.02.04",
+            "24.02.05"
+        ];
+
+        const yValues = [1, 2, 1, 4, 1];
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [...dates],
+                datasets: [{
+                    label: 'Guide Data',
+                    data: yValues,
+                    borderColor: '#0046C6',
+                    backgroundColor: '#FAFCFF',
+                    fill: 'start',
+                    tension: 0.4,
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        type: 'category',
+                        title: {
+                            display: false,
+                            text: 'Date'
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false
+                        },
+                        beginAtZero: true,
+                        title: {
+                            display: false,
+                            text: 'Value'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

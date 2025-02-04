@@ -237,4 +237,8 @@ $(document).ready(function () {
             el: ".swiper-pagination",
         },
     });
+
+    $('.btn-service-close').click(function() {
+        $(this).parent('.main-service-info').remove();
+    })
 });
