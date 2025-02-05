@@ -2125,6 +2125,24 @@
     display: flex;
 }
 
+.pet-search-result-list .no-date {
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+    gap: var(--space-20-md);
+}
+
+.pet-search-result-list .no-date img {
+    width: 54px;
+}
+
+.pet-search-result-list .no-date p {
+    color: var(--color-313D4A-darkgray);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-500-bold);
+}
+
 .pet-result-list-item {
     display: flex;
     flex-direction: column;
