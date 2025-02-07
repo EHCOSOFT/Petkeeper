@@ -220,7 +220,7 @@ $(document).ready(function () {
     });
 
     // tab
-    $(".tab-link").click(function(){
+    $(".tab-link").click(function () {
         var tabID = $(this).data("tab");
 
         if ($(this).data("url")) {
@@ -238,7 +238,49 @@ $(document).ready(function () {
         },
     });
 
-    $('.btn-service-close').click(function() {
+    $('.btn-service-close').click(function () {
         $(this).parent('.main-service-info').remove();
     })
+
+    // 비문등록 및 조회
+    // 버튼 클릭 이벤트
+    $(".btn-camera").on("click", function () {
+        $(this).siblings(".hidden-camera-input").click();
+    });
+
+    // 파일 선택 이벤트
+    $(".hidden-camera-input").on("change", function (event) {
+        const file = event.target.files[0];
+        const parentFilming = $(this).closest(".filming");
+
+        if (file) {
+            const reader = new FileReader();
+
+            // 파일 로드 후 실행
+            reader.onload = function (e) {
+                const imageSrc = e.target.result;
+
+                // 가이드에 맞는지 검증 (여기선 임시로 true/false를 랜덤으로 지정)
+                const isImageValid = Math.random() > 0.5; // 가이드 검증 로직 추가 필요
+
+                if (isImageValid) {
+
+                    // 이벤트 확인을 위해 임시로 넣어둠 
+                    // 가이드에 맞으면 배경 이미지를 업데이트
+                    parentFilming.css("background-image", `url(${imageSrc})`);
+                    parentFilming.removeClass("error");
+                    parentFilming.next('.btn-camera').remove();
+                } else {
+                    // 가이드에 맞지 않으면 배경 업데이트 + 에러 처리
+                    parentFilming.css("background-image", `url(${imageSrc})`);
+                    parentFilming.addClass("error");
+                    showToast("이미지를 다시 촬영해주세요");
+                }
+            };
+
+            reader.readAsDataURL(file);
+        } else {
+            showToast("촬영이 취소되었습니다.");
+        }
+    });
 });

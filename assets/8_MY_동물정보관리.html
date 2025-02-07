@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">나의 반려동물</h3>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="my-pet-area">
+                    <ul class="my-pet-list">
+                        <li class="my-pet-item">
+                            <div class="my-pet-info">
+                                <div class="profile" style="background: url(img/sample/cat-sample.jpg)">
+                                    <!-- <div class="dog"></div> -->
+                                </div>
+                                <div class="profile-info-detail">
+                                    <h5><span>댕댕이</span>
+                                        <div class="btn-group btn-space-min">
+                                            <button type="button" class="btn btn-ico btn-sm btn-set open-modal" data-modal-id="petSetModal">
+                                                <img src="img/ico/i-set.svg" alt="설정">
+                                            </button>
+                                        </div>
+                                    </h5>
+                                    <p>그레이트 피레니즈</p>
+                                    <p>동물등록번호 미등록 (중성화완료)</p>
+                                </div>
+                            </div>
+                            <div class="btn-group btn-space-xxs">
+                                <button type="button" class="btn btn-md btn-lightgray">비문등록</button>
+                                <button type="button" class="btn btn-md btn-lightgray">분실신고</button>
+                            </div>
+                        </li>
+                        <li class="my-pet-item">
+                            <div class="my-pet-info">
+                                <div class="profile">
+                                    <div class="dog"></div>
+                                </div>
+                                <div class="profile-info-detail">
+                                    <h5>
+                                        <img src="img/ico/i-epitaph.svg" alt="비문등록 완료" class="epitaph">
+                                        <span>댕댕이ddddddddddddd</span>
+                                        <div class="btn-group btn-space-min">
+                                            <img src="img/ico/i-star.svg" alt="대표 반려동물">
+                                            <button type="button" class="btn btn-ico btn-sm btn-set open-modal" data-modal-id="petSetModal">
+                                                <img src="img/ico/i-set.svg" alt="설정">
+                                            </button>
+                                        </div>
+                                    </h5>
+                                    <p>그레이트 피레니즈</p>
+                                    <p>동물등록번호 미등록 (중성화완료)</p>
+                                </div>
+                            </div>
+                            <div class="btn-group btn-space-xxs">
+                                <button type="button" class="btn btn-md btn-lightgray">비문변경</button>
+                                <button type="button" class="btn btn-md btn-lightgray">분실신고</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-wrap modal-bottom-sheet slide-up" id="petSetModal">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-topbar"></div>
+                <div class="modal-body">
+                    <div class="profile-cont">
+                        <h2>반려동물 정보 관리</h2>
+                        <ul>
+                            <li><a href="">대표 반려동물로 설정</a></li>
+                            <li><a href="">반려동물 정보 수정</a></li>
+                            <li><a href="">반려동물 삭제</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">AI 매칭 반려동물 찾기</h3>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="ai-area">
+                    <div class="ai-matching-result">
+                        <div class="intro">
+                            <h2>{멍멍이}와 비슷한<br>
+                                반려동물을 찾기 못했어요</h2>
+                            <h6>국가동물보호정보시스템에 등록된<br>
+                                구조동물 정보가 있는지 확인해보세요</h6>
+                        </div>
+                        <div class="pet-matching-result-none">
+                            <img src="img/sub/matching-result-none.svg" alt="">
+                            <a href="#">구조동물 찾기</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="btn-group bottom fixed bg-white">
+                <button type="button" class="btn btn-primary btn-lg">확인</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

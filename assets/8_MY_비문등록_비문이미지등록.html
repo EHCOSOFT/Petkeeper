@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <h3 class="header-title">비문등록</h3>
+                <a href="#" class="header-close">
+                    <img src="img/ico/i-header-close.svg" alt="닫기">
+                </a>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="add-epitaph-area">
+                    <div class="intro">
+                        <h2>반려동물이 움직이지 않은 상태에서<br><b>코의 무늬</b>가 잘 보이게 촬영해야<br>좋은 비문을 얻을 수 있어요</h2>
+                        <h6>각 영역을 선택하여 촬영해 주세요.<br>
+                            4장 이상의 촬영이 필요하고 사진이 많을 수록<br>
+                            정확도가 올라가요!</h6>
+                    </div>
+                    <div class="epitaph-filming">
+                        <div class="filming">
+                            <button type="button" class="btn-camera">
+                                <img src="img/ico/i-camera.svg" alt="촬영">
+                            </button>
+                            <input type="file" accept="image/*" capture="camera" class="hidden-camera-input">
+                        </div>
+                        <div class="filming">
+                            <button type="button" class="btn-camera">
+                                <img src="img/ico/i-camera.svg" alt="촬영">
+                            </button>
+                            <input type="file" accept="image/*" capture="camera" class="hidden-camera-input">
+                        </div>
+                        <div class="filming">
+                            <button type="button" class="btn-camera">
+                                <img src="img/ico/i-camera.svg" alt="촬영">
+                            </button>
+                            <input type="file" accept="image/*" capture="camera" class="hidden-camera-input">
+                        </div>
+                        <div class="filming">
+                            <button type="button" class="btn-camera">
+                                <img src="img/ico/i-camera.svg" alt="촬영">
+                            </button>
+                            <input type="file" accept="image/*" capture="camera" class="hidden-camera-input">
+                        </div>
+                        <div class="filming" style="background: url(img/sample/cat-sample.jpg);"></div>
+                        <div class="filming" style="background: url(img/sample/cat-sample.jpg);"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="btn-group bottom fixed bg-white">
+                <button type="button" class="btn btn-primary btn-lg">등록하기</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

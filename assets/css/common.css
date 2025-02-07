@@ -317,6 +317,10 @@ button:not(:disabled) {
     background: var(--color-f5f5f5-gray-rgb);
 }
 
+.gray {
+    background: var(--color-f5f5f5-gray-rgb);
+}
+
 .main .btn-group.bottom {
     margin: auto 0 0 0;
 }
@@ -500,6 +504,10 @@ button:not(:disabled) {
     width: 100%;
 }
 
+.btn-group.bg-white {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 50%);
+}
+
 .btn-group.border-top {
     border-top: 1px solid var(--color-cccccc-line);
 }
@@ -515,6 +523,10 @@ button:not(:disabled) {
 }
 
 /** 버튼 그룹 - 여백 **/
+.btn-group.btn-space-min {
+    gap: var(--space-4-min);
+}
+
 .btn-group.btn-space-xxs {
     gap: var(--space-8-xxs);
 }
@@ -574,7 +586,7 @@ button:not(:disabled) {
 
 .btn.btn-lightgray {
     background: var(--color-f5f5f5-gray-rgb);
-    border-color:  var(--color-f5f5f5-gray-rgb);
+    border-color: var(--color-f5f5f5-gray-rgb);
     color: var(--color-54595D-gray);
 }
 
@@ -618,7 +630,22 @@ button:not(:disabled) {
     opacity: 0.2;
 }
 
+.btn.btn-ico {
+    align-items: center;
+    background: none;
+    display: flex;
+}
+
+.btn.btn-ico img {
+    height: 20px;
+    width: 20px;
+}
+
 /** 버튼 - 크기별 **/
+.btn.btn-sm {
+    padding: var(--space-4-min);
+}
+
 .btn.btn-md {
     border-radius: var(--radius-12-md);
     font-size: var(--font-14-xs);

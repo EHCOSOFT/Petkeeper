@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">AI 매칭 반려동물 찾기</h3>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="ai-area">
+                    <div class="ai-matching">
+                        <div class="intro">
+                            <h1>AI로 잃어버린<br>반려동물을 찾아보세요</h1>
+                            <h6>반려동물 정보를 확인해 주세요</h6>
+                        </div>
+                        <div class="ai-pet">
+                            <div class="ai-pet-box">
+                                <div class="ai-pet-info">
+                                    <div class="profile">
+                                        <div class="dog"></div>
+                                    </div>
+                                    <div class="profile-info-detail">
+                                        <h5>댕댕이</h5>
+                                        <p>그레이트 피레니즈</p>
+                                        <p>동물등록번호 미등록 (중성화완료)</p>
+                                    </div>
+                                </div>
+                                <div class="ai-pet-info-detail">
+                                    <dl>
+                                        <dt>성별</dt>
+                                        <dd>남자아이</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>털색</dt>
+                                        <dd>크림색</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>중성화</dt>
+                                        <dd>완료</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>생년월일</dt>
+                                        <dd>2023. 08. 01</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>입양일</dt>
+                                        <dd>2023. 08. 01</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>몸무게</dt>
+                                        <dd>-</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="ai-pet-history">
+                                <div class="profile">
+                                    <div class="dog"></div>
+                                </div>
+                                <div class="profile" style="background: url(img/sample/cat-sample.jpg); background-size: cover;">
+                                </div>
+                                <div class="profile" style="background: url(img/sample/cat-sample.jpg); background-size: cover;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="btn-group bottom">
+                <button type="button" class="btn btn-primary btn-lg">반려동물 찾기</button>
+            </section>
+        </main>
+    </div>
+
+    <div class="loading show">
+        <img src="img/ico/i-loading.svg" alt="조회중">
+        <p>AI로 {멍멍이}를 찾고 있어요<br>
+            잠시만 기다려주세요</p>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

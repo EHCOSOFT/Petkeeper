@@ -1948,7 +1948,7 @@
 
 .profile-cont ul li a {
     color: var(--color-54595D-gray);
-    font-size: var(--font-16-md);
+    font-size: var(--font-15-sm);
     font-weight: var(--font-400-regular);
     text-align: left;
 }
@@ -2750,4 +2750,478 @@
     color: var(--color-181F27-balck);
     font-size: var(--font-14-xs);
     font-family: var(--font-family);
+}
+
+.ai-matching-area {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24-lg);
+    margin: 0;
+}
+
+.ai-matching {
+    display: flex;
+    flex-direction: column; 
+    gap: var(--space-32-xl);
+}
+
+.ai-matching img {
+    border-radius: var(--radius-20-xl);
+    height: 500px;
+    object-fit: cover;
+}
+
+.ai-area {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24-lg);
+    margin: var(--space-32-xl) 0;
+}
+
+.ai-matching .intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8-xxs);
+}
+
+.ai-matching .intro h1 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-title-28-xl);
+    font-weight: var(--font-700-bold);
+    line-height: 36px;
+    text-align: left;
+    width: 100%;
+}
+
+.ai-matching .intro h6 {
+    color: var(--color-54595D-gray);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-500-medium);
+    text-align: left;
+    width: 100%;
+}
+
+.ai-pet {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16-sm);
+}
+
+.ai-pet-box {
+    border: 1px solid var(--color-cccccc-line);
+    border-radius: var(--radius-20-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16-sm);
+    padding: var(--space-20-md);
+}
+
+.ai-pet-box .ai-pet-info {
+    align-items: center;
+    display: flex;
+    gap: var(--space-16-sm);
+}
+
+.ai-pet-box .ai-pet-info .profile {
+    height: 78px;
+    width: 78px;
+}
+
+.ai-pet-box .ai-pet-info .profile .dog,
+.ai-pet-box .ai-pet-info .profile .cat {
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+}
+
+.ai-pet-box .ai-pet-info .profile-info-detail h5 {
+    color: var(--color-313D4A-darkgray);
+    font-size: var(--font-18-lg);
+    font-weight: var(--font-700-bold);
+    line-height: 24px;
+    margin: 0 0 var(--space-8-xxs) 0;
+}
+
+.ai-pet-box .ai-pet-info .profile-info-detail p {
+    color: var(--color-72777B-lightgray);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-400-regular);
+    line-height: 20px;
+}
+
+.ai-pet-box .ai-pet-info-detail {
+    background: var(--color-f5f5f5-gray-rgb);
+    border-radius: var(--radius-12-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8-xxs);
+    padding: var(--space-16-sm);
+}
+
+.ai-pet-box .ai-pet-info-detail dl {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ai-pet-box .ai-pet-info-detail dt {
+    color: var(--color-313D4A-darkgray);
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-500-bold);
+    line-height: 22px;
+}
+
+.ai-pet-box .ai-pet-info-detail dd {
+    color: var(--color-313D4A-darkgray);
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-500-bold);
+    line-height: 22px;
+}
+
+.ai-pet-history {
+    display: flex;
+    gap: var(--space-16-sm);
+}
+
+.ai-pet-history .profile {
+    flex: 1;
+    height: 100px;
+}
+
+.ai-pet-history .profile .dog,
+.ai-pet-history .profile .cat {
+    height: 60px;
+    width: 60px;
+}
+
+.ai-matching-result {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-32-xl);
+}
+
+.ai-matching-result .intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8-xxs);
+}
+
+.ai-matching-result h2 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-title-24-lg);
+    font-weight: var(--font-700-bold);
+    line-height: 36px;
+}
+
+.ai-matching-result h6 {
+    color: var(--color-54595D-gray);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-500-medium);
+    text-align: left;
+    width: 100%;
+}
+
+.pet-matching-result-none {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-20-md);
+    height: 280px;
+}
+
+.pet-matching-result-none img {
+    max-width: 262px;
+}
+
+.pet-matching-result-none a {
+    background: var(--color-f5f5f5-gray-rgb);
+    border-radius: var(--radius-12-md);
+    color: var(--color-54595D-gray);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-500-medium);
+    padding: var(--space-16-sm) var(--space-40-xxl);
+}
+
+.my-pet-area {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24-lg);
+}
+
+.my-pet-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12-xs);
+}
+
+.my-pet-item {
+    border: 1px solid var(--color-cccccc-line);
+    border-radius: var(--radius-20-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20-md);
+    padding: var(--space-20-md);
+}
+
+.my-pet-item .my-pet-info {
+    display: flex;
+    gap: var(--space-16-sm);
+}
+
+.my-pet-item .my-pet-info .profile {
+    flex: 0 0 auto;
+    height: 78px;
+    width: 78px;
+}
+
+.my-pet-item .my-pet-info .profile .dog,
+.my-pet-item .my-pet-info .profile .cat {
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+}
+
+.my-pet-item .my-pet-info .profile-info-detail {
+    flex: 1;
+}
+
+.my-pet-item .my-pet-info .profile-info-detail h5 {
+    align-items: center;
+    color: var(--color-313D4A-darkgray);
+    display: flex;
+    font-size: var(--font-18-lg);
+    font-weight: var(--font-700-bold);
+    line-height: 24px;
+    margin: 0 0 var(--space-8-xxs) 0;
+}
+
+.my-pet-item .my-pet-info .profile-info-detail .epitaph {
+    height: 20px;
+    margin: 0 var(--space-4-min) 0 0;
+    width: 20px;
+}
+
+.my-pet-item .my-pet-info .profile-info-detail h5 span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100px;
+}
+
+.my-pet-item .my-pet-info .profile-info-detail .btn-group {
+    align-items: center;
+    margin: 0 0 0 auto;
+    position: relative;
+    right: -4px;
+}
+
+.my-pet-item .my-pet-info .profile-info-detail .btn-set {
+    position: relative;
+}
+
+.my-pet-item .my-pet-info .profile-info-detail p {
+    color: var(--color-72777B-lightgray);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-400-regular);
+    line-height: 21px;
+}
+
+.my-pet-item>.btn-group button {
+    color: var(--color-54595D-gray);
+}
+
+.add-epitaph-area {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-32-xl);
+    margin: var(--space-24-lg) 0;
+}
+
+.add-epitaph-area .intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16-sm);
+}
+
+.add-epitaph-area .intro h2 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-title-22-md);
+    font-weight: var(--font-700-bold);
+    line-height: 32px;
+    text-align: center;
+}
+
+.add-epitaph-area .intro h2 b {
+    color: var(--color-0046C6-primary-hover);
+}
+
+.add-epitaph-area .intro h6 {
+    color: var(--color-54595D-gray);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-400-regular);
+    line-height: 24px;
+    text-align: center;
+}
+
+.epitaph-filming {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-8-xxs);
+}
+
+.epitaph-filming .filming {
+    align-items: center;
+    background: var(--color-f5f5f5-gray-rgb);
+    background-size: cover !important;
+    border-radius: var(--radius-16-lg);
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    width: 120px;
+}
+
+.epitaph-filming .filming.error {
+    border: 4px solid var(--color-DB0000-red);
+}
+
+.epitaph-filming .filming button {
+    background: none;
+    height: 100%;
+    width: 100%;
+}
+
+.epitaph-filming .filming button img {
+    height: 40px;
+    width: 40px;
+}
+
+.epitaph-filming .filming input {
+    display: none;
+}
+
+.test-filming .epitaph-guide {
+    background: url(../img/ico/i-epitaph-guide.svg);
+    background-size: cover;
+    height: 102px;
+    position: absolute;
+    width: 102px;
+}
+
+.qr-pet {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-32-xl);
+    padding: var(--space-40-xxl) 0;
+}
+
+.qr-pet>img {
+    border-radius: var(--radius-12-md);
+    height: 200px;
+    object-fit: cover;
+    width: 200px;
+}
+
+.qr-pet .qr-pet-text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8-xxs);
+}
+
+.qr-pet .qr-pet-text h3 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-title-22-md);
+    font-weight: var(--font-700-bold);
+    line-height: 32px;
+}
+
+.qr-pet .qr-pet-text h6 {
+    color: var(--color-54595D-gray);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-400-regular);
+    line-height: 24px;
+    text-align: center;
+}
+
+.qr-pet .link-group {
+    display: flex;
+    gap: var(--space-8-xxs);
+}
+
+.qr-pet .link-group a {
+    align-items: center;
+    background: var(--color-ffffff-white);
+    border-radius: var(--radius-16-lg);
+    display: flex;
+    justify-content: center;
+    height: 88px;
+    width: 120px;
+}
+
+.qr-pet .link-group a:active,
+.qr-pet .link-group a:hover {
+    background: var(--color-0046C6-primary-hover);
+}
+
+.qr-pet .link-group a>img {
+    height: 40px;
+    width: 40px;
+}
+
+.qr-pet .link-group a:hover>img,
+.qr-pet .link-group a:active>img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(125deg) brightness(103%) contrast(103%);
+}
+
+.qr-pet-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20-md);
+    padding: var(--space-40-xxl) 0;
+}
+
+.qr-pet-info h2 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-title-20-sm);
+    font-weight: var(--font-700-bold);
+    line-height: 28px;
+}
+
+.qr-pet-info .dl-group {
+    background: var(--color-f5f5f5-gray-rgb);
+    border-radius: var(--radius-16-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12-xs);
+    padding: var(--space-24-lg);
+    width: 100%;
+}
+
+.qr-pet-info .dl-group dl {
+    align-items: center;
+    display: flex;
+    gap: var(--space-32-xl);
+    justify-content: space-between;
+}
+
+.qr-pet-info .dl-group dl dt {
+    color: var(--color-313D4A-darkgray);
+    flex: 0 0 auto;
+    font-size: var(--font-16-md);
+    font-weight: var(--font-500-bold);
+    line-height: 22px;
+}
+
+.qr-pet-info .dl-group dl dd {
+    color: var(--color-54595D-gray);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-500-bold);
+    line-height: 22px;
+    text-align: right;
+    word-break: break-all;
 }
