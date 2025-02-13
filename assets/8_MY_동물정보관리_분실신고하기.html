@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">분실신고하기</h3>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="my-pet-area">
+                    <ul class="my-pet-list">
+                        <li class="my-pet-item">
+                            <div class="my-pet-info">
+                                <div class="profile">
+                                    <div class="dog"></div>
+                                </div>
+                                <div class="profile-info-detail">
+                                    <h5>
+                                        <span>댕댕이ddddddddddddd</span>
+                                    </h5>
+                                    <p>그레이트 피레니즈</p>
+                                    <p>동물등록번호 미등록 (중성화완료)</p>
+                                </div>
+                            </div>
+                            <div class="my-pet-info-detail">
+                                <dl>
+                                    <dt>성별</dt>
+                                    <dd>남자아이</dd>
+                                </dl>
+                                <dl>
+                                    <dt>털색</dt>
+                                    <dd>크림색</dd>
+                                </dl>
+                                <dl>
+                                    <dt>중성화</dt>
+                                    <dd>완료</dd>
+                                </dl>
+                                <dl>
+                                    <dt>생년월일</dt>
+                                    <dd>2023. 08. 01</dd>
+                                </dl>
+                                <dl>
+                                    <dt>입양일</dt>
+                                    <dd>2023. 08. 01</dd>
+                                </dl>
+                                <dl>
+                                    <dt>몸무게</dt>
+                                    <dd>-</dd>
+                                </dl>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="input-wrap">
+                        <div class="select-group error">
+                            <label for="">분실장소<span>*</span></label>
+                            <div class="select-group-field">
+                                <div class="select-group-row-field">
+                                    <select name="" id="">
+                                        <option value="1">서울특별시</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="1">영등포구</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label for="" class="d-none">성별</label>
+                                    <div class="input-group-field">
+                                        <input type="text" placeholder="분실 장소를 입력해주세요">
+                                    </div>
+                                </div>
+                                <small>값이 입력 및 선택되지 않았습니다.</small>
+                            </div>
+                        </div>
+                        <div class="date-group">
+                            <label for="">분실일시<span>*</span></label>
+                            <div class="date-group-area">
+                                <div class="date-group-field">
+                                    <input type="date">
+                                </div>
+                                <div class="date-group-field">
+                                    <input type="time">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="">제목<span>*</span></label>
+                            <div class="input-group-field">
+                                <input type="text" placeholder="제목을 입력해주세요">
+                            </div>
+                        </div>
+                        <div class="text-group">
+                            <label for="">내용<span>*</span></label>
+                            <textarea name="" id="" placeholder="내용을 입력해주세요"></textarea>
+                        </div>
+                        <div class="filming-group">
+                            <h6>추가사진</h6>
+                            <div class="epitaph-filming">
+                                <div class="filming" style="background: url(img/sample/cat-sample.jpg);"></div>
+                                <div class="filming">
+                                    <button type="button" class="btn-camera open-modal" data-modal-id="profileModal">
+                                        <img src="img/ico/i-camera.svg" alt="촬영">
+                                    </button>
+                                </div>
+                                <div class="filming">
+                                    <button type="button" class="btn-camera open-modal" data-modal-id="profileModal">
+                                        <img src="img/ico/i-camera.svg" alt="촬영">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-wrap">
+                            <h6>연락처<span>*</span></h6>
+                            <div class="radio-group-field">
+                                <div class="radio-group">
+                                    <input type="radio" id="contact-phone" name="contact">
+                                    <label for="contact-phone">휴대폰 번호</label>
+                                </div>
+                                <div class="radio-group">
+                                    <input type="radio" id="contact-kakao" name="contact">
+                                    <label for="contact-kakao">카카오 오픈톡</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group phone-input">
+                            <label for="">이름<span>*</span></label>
+                            <div class="input-group-field">
+                                <input type="text" placeholder="이름을 입력해주세요">
+                            </div>
+                        </div>
+                        <div class="input-group phone-input">
+                            <label for="">휴대폰 번호<span>*</span></label>
+                            <div class="input-group-field">
+                                <input type="text" placeholder="휴대폰 번호를 입력해주세요">
+                            </div>
+                        </div>
+                        <div class="input-group kakao-input">
+                            <label for="">오픈톡 주소
+                                <div class="tooltip">
+                                    <img src="img/ico/i-tooltip.svg" alt="도움말">
+                                    <div class="tooltip-box">
+                                        <h6>카카오톡 실행 후<br>
+                                            더보기>설정>채팅>내 오픈채팅방<br>
+                                            관리에서 1:1 오픈 채팅방 생성 후<br>
+                                            생성된 대화방 URL을 입력해 주세요.</h6>
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="input-group-field">
+                                <input type="text" placeholder="오픈톡 주소를 넣어주세요">
+                                <h6>카카오톡 오픈톡으로 제보를 받을 수 있어요</h6>
+                            </div>
+                        </div>
+                        <div class="check-wrap">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">
+                                    <span class="text">(필수)개인정보 수집· 이용 동의</span>
+                                </label>
+                                <a href="#" class="check-link">
+                                    <img src="img/ico/i-check-link.svg" alt="약관 상세보기">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="btn-group bottom fixed bg-white">
+                <button type="button" class="btn btn-primary btn-lg open-modal" data-modal-id="regCompletionModal">분실 신고하기</button>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-wrap modal-bottom-sheet slide-up" id="profileModal">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-topbar"></div>
+                <div class="modal-body">
+                    <div class="profile-cont">
+                        <h2>사진</h2>
+                        <ul>
+                            <li><a href="">사진찍기</a></li>
+                            <li><a href="">사진앨범</a></li>
+                            <li><a href="">사진삭제</a></li>
+                            <li><a href="" class="btn-modal-close">취소</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-wrap" id="regCompletionModal">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-alert">
+                        <h5>분실신고 등록이 완료되었어요</h5>
+                        <h6>AI 이미지 매칭으로 전국 보호소에<br>
+                            보호중인 반려동물을 확인할 수 있어요</h6>
+                        <a href="#">AI 매칭 반려동물 찾기</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary btn-lg btn-modal-close">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

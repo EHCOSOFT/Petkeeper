@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">배송지 관리</h3>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="reg-area">
+                    <div class="reg-title-group">
+                        <h1>배송지를 등록해야<br>배송상품을 받을 수 있어요</h1>
+                        <!-- <h1>배송상품은 우체국을 통해<br>발송돼요 우편 수치함을<br>확인해 주세요</h1> -->
+                    </div>
+                    <div class="input-wrap">
+                        <div class="input-group error">
+                            <label for="">이름<span>*</span></label>
+                            <div class="input-group-field">
+                                <input type="text" placeholder="이름을 입력해주세요">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="">휴대폰 번호<span>*</span></label>
+                            <div class="input-group-field">
+                                <input type="text" placeholder="휴대폰 번호를 입력해주세요">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="">주소<span>*</span></label>
+                            <div class="input-group-field">
+                                <div class="input-field-search">
+                                    <input type="text" placeholder="주소를 입력해주세요">
+                                    <button type="button" class="btn-search"></button>
+                                </div>
+                                <input type="text" placeholder="상세주소를 입력해주세요">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="btn-group bottom fixed">
+                <button type="button" class="btn btn-primary btn-lg">등록</button>
+                <!-- <button type="button" class="btn btn-primary btn-lg">변경</button> -->
+            </section>
+        </main>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

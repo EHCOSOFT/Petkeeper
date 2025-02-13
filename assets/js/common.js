@@ -283,4 +283,52 @@ $(document).ready(function () {
             showToast("촬영이 취소되었습니다.");
         }
     });
+
+    $('.tooltip img').click(function (e) {
+        e.stopPropagation();
+        $(this).next('.tooltip-box').toggleClass('show');
+    });
+
+    $(document).on('click', function () {
+        $('.tooltip-box').removeClass('show');
+    });
+
+    $('.tooltip-box').click(function (e) {
+        e.stopPropagation();
+    });
+
+    $('input[name="contact"]').on('change', function () {
+        if ($('#contact-phone').is(':checked')) {
+            $('.phone-input').addClass('show').show();
+            $('.kakao-input').removeClass('show').hide();
+        } else if ($('#contact-kakao').is(':checked')) {
+            $('.kakao-input').addClass('show').show();
+            $('.phone-input').removeClass('show').hide();
+        }
+    });
+
+    $('.phone-input, .kakao-input').hide();
+
+    // 쿠폰 번호 클릭 시 복사 및 토스트 메시지 표시
+    $('.coupon-number').on('click', function (e) {
+        e.preventDefault(); // 기본 동작 방지 (스크롤 등)
+
+        // 만약 .exp 클래스가 있으면 이벤트를 중단
+        if ($(this).hasClass('exp')) {
+            return; // 아무 작업도 수행하지 않음
+        }
+
+        // 쿠폰 번호에서 숫자만 추출
+        const couponText = $(this).text();
+        const couponNumber = couponText.replace(/\D/g, ''); // 숫자 외의 문자를 제거
+
+        // 클립보드에 쿠폰 번호 복사
+        navigator.clipboard.writeText(couponNumber).then(() => {
+            // 성공 시 토스트 메시지 표시
+            showToast(`쿠폰번호 ${couponNumber}이(가) 복사되었습니다.`);
+        }).catch(err => {
+            // 실패 시 오류 처리 (선택 사항)
+            console.error('쿠폰 번호 복사 실패:', err);
+        });
+    });
 });

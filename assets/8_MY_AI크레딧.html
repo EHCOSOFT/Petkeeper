@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">MY</h3>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="my-cont-area">
+                    <div class="date-group">
+                        <label for="" class="d-none">조회기간<span>*</span></label>
+                        <div class="date-group-area">
+                            <div class="date-group-field">
+                                <input type="date">
+                            </div>
+                            <span>~</span>
+                            <div class="date-group-field">
+                                <input type="date">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="my-ai-credit">
+                        <li class="disappear">
+                            <span>소멸</span>
+                            <div class="credit-info">
+                                <h6>2024. 12. 21 12:00</h6>
+                                <h4>기한 만료 크레딧<span class="minus">-100</span></h4>
+                            </div>
+                        </li>
+                        <li class="use">
+                            <span>사용</span>
+                            <div class="credit-info">
+                                <h6>2024. 12. 21 12:00</h6>
+                                <h4>AI 펫닥터<span class="minus">-100</span></h4>
+                            </div>
+                        </li>
+                        <li class="accumulate">
+                            <span>적립</span>
+                            <div class="credit-info">
+                                <h6>2024. 12. 21 12:00</h6>
+                                <h4>월별 무료 크레딧<span class="plus">+200</span></h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

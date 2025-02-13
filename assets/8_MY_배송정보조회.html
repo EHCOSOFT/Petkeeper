@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="header-back">
+                    <img src="img/ico/i-header-back.svg" alt="뒤로가기">
+                </a>
+                <h3 class="header-title">배송 정보 조회</h3>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="my-cont-area">
+                    <div class="date-group">
+                        <label for="" class="d-none">조회기간<span>*</span></label>
+                        <div class="date-group-area">
+                            <div class="date-group-field">
+                                <input type="date">
+                            </div>
+                            <span>~</span>
+                            <div class="date-group-field">
+                                <input type="date">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="my-delivery-list">
+                        <li class="no-delivery">
+                            <img src="img/ico/i-no-delivery.svg" alt="조회 조건 없음">
+                            <h6>조회 조건에 해당하는 내역이 없어요</h6>
+                        </li>
+                        <li>
+                            <div class="delivery-top">
+                                <span class="progress">배송중</span>
+                                <a href="#">배송조회</a>
+                            </div>
+                            <div class="delivery-info">
+                                <img src="img/sample/cat-sample.jpg" alt="상품 이미지">
+                                <div class="delivery-text">
+                                    <h6>2회차</h6>
+                                    <h4>소변 검사 키트</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="delivery-top">
+                                <span class="completion">배송완료</span>
+                                <p>12.07(토) 배송완료</p>
+                            </div>
+                            <div class="delivery-info">
+                                <img src="img/sample/cat-sample.jpg" alt="상품 이미지">
+                                <div class="delivery-text">
+                                    <h6>2회차</h6>
+                                    <h4>반려동물 OR 목걸이 + 소변검사키트 반려동물 OR 목걸이 + 소변검사키트</h4>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
