@@ -166,7 +166,7 @@
 }
 
 .service-list {
-    margin: 0 0 var(--space-40-xxl) 0;
+    /* margin: 0 0 var(--space-40-xxl) 0; */
 }
 
 .service-list li {
