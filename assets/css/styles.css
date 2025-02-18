@@ -3565,8 +3565,18 @@
 }
 
 .my-delivery-list .delivery-top span.completion {
+    background: var(--color-E4F9EF-secondary-bg);
+    color: var(--color-00783f-secondary);
+}
+
+.my-delivery-list .delivery-top span.prepare {
     background: var(--color-f5f5f5-gray-rgb);
     color: var(--color-54595D-gray);
+}
+
+.my-delivery-list .delivery-top span.cancel {
+    background: var(--color-FBEBE8-warning-bg);
+    color: var(--color-DB0000-red);
 }
 
 .my-delivery-list .delivery-top a,
