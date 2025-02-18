@@ -2434,6 +2434,10 @@
     width: 16px;
 }
 
+.hospital-info h6.call::before {
+    background: url(../img/ico/i-phone.svg);
+}
+
 .pet-hospital-item .link-group {
     display: flex;
     gap: var(--space-8-xxs);
