@@ -487,6 +487,10 @@ button:not(:disabled) {
     display: flex;
 }
 
+.btn-group.w-full {
+    width: 100%;
+}
+
 .btn-group.column {
     align-items: center;
     flex-direction: column;
@@ -1098,6 +1102,12 @@ button:not(:disabled) {
     margin: 0 0 0 2px;
 }
 
+.radio-wrap.error small {
+    color: var(--color-DB0000-red);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-400-regular);
+}
+
 .radio-group-field {
     display: flex;
     gap: var(--space-8-xxs);
@@ -1336,6 +1346,12 @@ button:not(:disabled) {
 
 .text-group textarea::placeholder {
     color: var(--color-B5BAC0-palegray);
+    font-weight: var(--font-400-regular);
+}
+
+.text-group.error small {
+    color: var(--color-DB0000-red);
+    font-size: var(--font-14-xs);
     font-weight: var(--font-400-regular);
 }
 

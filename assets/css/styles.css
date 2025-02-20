@@ -3706,6 +3706,12 @@
     width: 100%;
 }
 
+.filming-group.error small {
+    color: var(--color-DB0000-red);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-400-regular);
+}
+
 .my-coupon-area {
     margin: var(--space-12-xs) 0;
     position: relative;
@@ -3840,4 +3846,11 @@
     font-size: var(--font-16-md);
     font-weight: var(--font-400-regular);
     line-height: 24px;
+}
+
+.text-link {
+    color: var(--color-72777B-lightgray);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-400-regular);
+    line-height: 21px;
 }

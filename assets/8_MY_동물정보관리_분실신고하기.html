@@ -108,11 +108,12 @@
                                 <input type="text" placeholder="제목을 입력해주세요">
                             </div>
                         </div>
-                        <div class="text-group">
+                        <div class="text-group error">
                             <label for="">내용<span>*</span></label>
                             <textarea name="" id="" placeholder="내용을 입력해주세요"></textarea>
+                            <small>값이 입력 및 선택되지 않았습니다.</small>
                         </div>
-                        <div class="filming-group">
+                        <div class="filming-group error">
                             <h6>추가사진</h6>
                             <div class="epitaph-filming">
                                 <div class="filming" style="background: url(img/sample/cat-sample.jpg);"></div>
@@ -127,8 +128,9 @@
                                     </button>
                                 </div>
                             </div>
+                            <small>값이 입력 및 선택되지 않았습니다.</small>
                         </div>
-                        <div class="radio-wrap">
+                        <div class="radio-wrap error">
                             <h6>연락처<span>*</span></h6>
                             <div class="radio-group-field">
                                 <div class="radio-group">
@@ -140,6 +142,7 @@
                                     <label for="contact-kakao">카카오 오픈톡</label>
                                 </div>
                             </div>
+                            <small>값이 입력 및 선택되지 않았습니다.</small>
                         </div>
                         <div class="input-group phone-input">
                             <label for="">이름<span>*</span></label>
@@ -184,8 +187,18 @@
                     </div>
                 </div>
             </section>
-            <section class="btn-group bottom fixed bg-white">
-                <button type="button" class="btn btn-primary btn-lg open-modal" data-modal-id="regCompletionModal">분실 신고하기</button>
+
+            <!-- <section class="btn-group bottom fixed bg-white">
+                <button type="button" class="btn btn-primary btn-lg open-modal" data-modal-id="regCompletionModal">분실
+                    신고하기</button>
+            </section> -->
+            
+            <section class="btn-group bottom fixed bg-white column btn-space-sm">
+                <a href="#" class="text-link">반려동물을 찾으셨나요?</a>
+                <section class="btn-group last btn-space-xxs w-full">
+                    <button type="button" class="btn btn-none btn-lg">삭제</button>
+                    <button type="button" class="btn btn-primary btn-lg">수정</button>
+                </section>
             </section>
         </main>
     </div>
