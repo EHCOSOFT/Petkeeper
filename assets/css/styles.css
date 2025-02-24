@@ -3022,6 +3022,12 @@
     max-width: 100px;
 }
 
+@media screen and (max-width: 300px) {
+    .my-pet-item .my-pet-info .profile-info-detail h5 span {
+        max-width: 76px;
+    }
+}
+
 .my-pet-item .my-pet-info .profile-info-detail .btn-group {
     align-items: center;
     margin: 0 0 0 auto;
