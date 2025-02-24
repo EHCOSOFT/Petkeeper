@@ -12,7 +12,7 @@ $(document).ready(function () {
         var $modal = $("#" + modalId);
         $("#" + modalId).addClass("active");
         if (!($modal.hasClass("full-modal") || $modal.hasClass("toggle-modal"))) {
-            window.addEventListener("wheel", removeDefaultEvent, { passive: false });
+            // window.addEventListener("wheel", removeDefaultEvent, { passive: false });
         }
 
         if ($modal.hasClass("toggle-modal")) {

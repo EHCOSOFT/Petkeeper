@@ -101,6 +101,44 @@
     --header-56-height: 56px;
 }
 
+@media screen and (max-width: 300px) {
+    :root {
+        --font-title-28-xl: 24px;
+        --font-title-24-lg: 22px;
+        --font-title-22-md: 20px;
+        --font-title-20-sm: 18px;
+        --font-title-18-xs: 16px;
+
+        --font-20-xl: 28px;
+        --font-18-lg: 16px;
+        --font-16-md: 14px;
+        --font-15-sm: 14px;
+        --font-14-xs: 13px;
+        --font-13-xxs: 13px;
+        --font-12-min: 12px;
+
+        --space-80-fivexl: 60px;
+        --space-60-fourxl: 48px;
+        --space-48-threexl: 40px;
+        --space-40-xxl: 32px;
+        --space-32-xl: 24px;
+        --space-24-lg: 20px;
+        --space-20-md: 16px;
+        --space-16-sm: 10px;
+        --space-12-xs: 8px;
+        --space-8-xxs: 8px;
+        --space-4-min: 4px;
+
+        --radius-full: 100px;
+        --radius-28-threexl: 24px;
+        --radius-24-xxl: 20px;
+        --radius-20-xl: 16px;
+        --radius-16-lg: 12px;
+        --radius-12-md: 8px;
+        --radius-8-sm: 4px;
+    }
+}
+
 *,
 ::before,
 ::after {
@@ -232,6 +270,12 @@ button:not(:disabled) {
     width: 100%;
 }
 
+/* @media screen and (max-width: 320px) {
+    .container {
+        padding: 0 var(--space-16-sm);
+    }
+} */
+
 /* **************************************** *
  * Common
  * **************************************** */
@@ -303,6 +347,20 @@ button:not(:disabled) {
     flex-direction: column;
     min-height: 100%;
     position: relative;
+}
+
+.z-space {
+    display: block;
+}
+
+@media screen and (max-width: 300px) {
+    .wrap {
+        zoom: 0.8;
+    }
+
+    .z-space {
+        display: none;
+    }
 }
 
 .main {
@@ -801,11 +859,35 @@ button:not(:disabled) {
     animation: modalSlideUp 0.5s ease;
 }
 
+.modal-wrap.full-modal .modal-wrap {
+    z-index: 103;
+}
+
+.modal-wrap.full-modal .modal-content {
+    background: var(--color-f5f5f5-gray-rgb);
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+.modal-wrap.full-modal .modal-body {
+    padding: 0 var(--space-24-lg);
+    text-align: left;
+}
 
 .modal-header {
     align-items: center;
+    background: var(--color-ffffff-white);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding: var(--space-16-sm) var(--space-24-lg);
+    position: sticky;
+    top: 0;
 }
 
 .modal-header.vertical {
@@ -819,9 +901,22 @@ button:not(:disabled) {
 }
 
 .modal-header button {
+    align-items: center;
     background: none;
     border: 0;
+    display: flex;
     padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: var(--space-24-lg);
+}
+
+.modal-header .modal-title {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-18-lg);
+    font-weight: var(--font-700-bold);
+    line-height: 24px;
 }
 
 .modal-title {
@@ -1221,6 +1316,15 @@ button:not(:disabled) {
     padding: var(--space-16-sm);
     -webkit-appearance: none;
     width: 100%;
+}
+
+@media screen and (max-width: 300px) {
+    .date-group input,
+    .date-group input[type=time] {
+        background: var(--color-f5f5f5-gray-rgb) url(../img/ico/i-datepicker.svg) no-repeat 50%/16px;
+        background-position: right 10px center;
+        height: 42px;
+    }
 }
 
 .date-group input:hover,

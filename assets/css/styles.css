@@ -543,30 +543,33 @@
     box-shadow: 0 0 20px rgba(0, 34, 95, 0.1);
     display: flex;
     flex-direction: column;
+    height: 100%;
     overflow: hidden;
 }
 
 .main-service-list dl {
     border-radius: var(--radius-16-lg);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .main-service-list dt {
     border-top-left-radius: var(--radius-16-lg);
     border-top-right-radius: var(--radius-16-lg);
-    ;
     display: flex;
 }
 
 .main-service-list dt img {
     border-top-left-radius: var(--radius-16-lg);
     border-top-right-radius: var(--radius-16-lg);
-    ;
 }
 
 .main-service-list dd {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
+    height: 100%;
     gap: var(--space-4-min);
     padding: var(--space-12-xs) var(--space-16-sm);
 }
