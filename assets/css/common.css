@@ -101,7 +101,7 @@
     --header-56-height: 56px;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
     :root {
         --font-title-28-xl: 24px;
         --font-title-24-lg: 22px;
@@ -353,7 +353,7 @@ button:not(:disabled) {
     display: block;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
     .wrap {
         zoom: 0.8;
     }
@@ -576,7 +576,7 @@ button:not(:disabled) {
 
 .btn-group.last>.btn:first-child {
     flex: 0 0 auto;
-    width: 100px;
+    width: 88px;
 }
 
 .btn-group>.btn {
@@ -931,8 +931,8 @@ button:not(:disabled) {
 }
 
 .modal-body p {
-    color: var(--pass-darkgray);
-    font-size: var(--pass-text-md);
+    color: var(--color-313D4A-darkgray);
+    font-size: var(--font-16-md);
 }
 
 .modal-alert {
@@ -969,6 +969,13 @@ button:not(:disabled) {
     font-weight: var(--font-500-medium);
     line-height: 26px;
     text-decoration: underline;
+}
+
+.modal-alert a.btn-link {
+    color: var(--color-72777B-lightgray);
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-500-medium);
+    text-decoration: none;
 }
 
 .modal-bottom .modal-body {
@@ -1208,6 +1215,10 @@ button:not(:disabled) {
     gap: var(--space-8-xxs);
 }
 
+.radio-group-field.field-column {
+    flex-direction: column;
+}
+
 .radio-group {
     flex: 1;
 }
@@ -1319,6 +1330,7 @@ button:not(:disabled) {
 }
 
 @media screen and (max-width: 300px) {
+
     .date-group input,
     .date-group input[type=time] {
         background: var(--color-f5f5f5-gray-rgb) url(../img/ico/i-datepicker.svg) no-repeat 50%/16px;
