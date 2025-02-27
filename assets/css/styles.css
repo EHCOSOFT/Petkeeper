@@ -3491,6 +3491,7 @@
 .my-ai-credit li span {
     border-radius: var(--radius-full);
     font-size: var(--font-14-xs);
+    flex: 0 0 auto;
     padding: var(--space-8-xxs) var(--space-16-sm);
 }
 
@@ -3513,6 +3514,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    width: 100%;
 }
 
 .my-ai-credit li .credit-info h6 {
@@ -3528,6 +3530,25 @@
     font-size: var(--font-18-lg);
     font-weight: var(--font-700-bold);
     display: flex;
+    gap: var(--space-8-xxs);
+    width: 100%;
+}
+
+.my-ai-credit li .credit-info h4 b {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100vw - 200px);
+}
+
+@media screen and (max-width: 320px) {
+    .my-ai-credit li .credit-info h4 b {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: calc(100vw - 80px);
+    }
+    
 }
 
 .my-ai-credit li .credit-info h4 span {
