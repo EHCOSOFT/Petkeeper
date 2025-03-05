@@ -1065,14 +1065,25 @@
 }
 
 .test-result .blur {
+    align-items: center;
     background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(10px);
     border-radius: var(--radius-12-md);
+    display: flex;
     height: 100%;
+    justify-content: center;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+.test-result .blur h6 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-700-bold);
+    line-height: 20px;
+    text-align: center;
 }
 
 .result-detail-group {
