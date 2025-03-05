@@ -217,7 +217,53 @@ $(document).ready(function () {
         pagination: {
             el: ".swiper-pagination",
         },
+        allowTouchMove: false,
     });
+
+    // 버튼 요소 가져오기
+    const $btnNext = document.querySelector(".btn-next");
+    const $btnPrev = document.querySelector(".btn-prev");
+    const $checkGroup = document.querySelector(".check-group");
+
+    // 이전 버튼 비활성화 (초기 상태)
+    if ($btnPrev) $btnPrev.disabled = true;
+
+    // 다음 버튼 클릭 이벤트
+    $btnNext.addEventListener("click", () => {
+        if (testInfoSwiper.activeIndex < testInfoSwiper.slides.length - 1) {
+            testInfoSwiper.slideNext();
+        }
+
+        updateButtons(); // 버튼 상태 업데이트
+    });
+
+    // 이전 버튼 클릭 이벤트
+    if ($btnPrev) {
+        $btnPrev.addEventListener("click", () => {
+            testInfoSwiper.slidePrev();
+            updateButtons(); // 버튼 상태 업데이트
+        });
+    }
+
+    // 버튼 상태 업데이트 함수
+    function updateButtons() {
+        // 현재 인덱스 가져오기
+        const currentIndex = testInfoSwiper.activeIndex;
+        const totalSlides = testInfoSwiper.slides.length;
+
+        // 첫 번째 슬라이드면 이전 버튼 비활성화, 아니면 활성화
+        if ($btnPrev) {
+            $btnPrev.disabled = currentIndex === 0;
+        }
+
+        // 마지막 슬라이드면 체크박스 보이게 처리
+        if ($checkGroup) {
+            $checkGroup.style.display = currentIndex === totalSlides - 1 ? "block" : "none";
+        }
+    }
+
+    // 초기 버튼 상태 설정
+    updateButtons();
 
     // tab
     $(".tab-link").click(function () {
