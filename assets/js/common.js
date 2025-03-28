@@ -199,6 +199,28 @@ $(document).ready(function () {
         },
     });
 
+    function matchSlideHeights() {
+        const slides = document.querySelectorAll('.main-swiper .swiper-slide');
+        let maxHeight = 0;
+
+        // 각 슬라이드 높이 측정해서 최대값 찾기
+        slides.forEach(slide => {
+            slide.style.height = 'auto'; // 높이 초기화 후 측정
+            const height = slide.offsetHeight;
+            if (height > maxHeight) maxHeight = height;
+        });
+
+        // 모든 슬라이드 높이를 maxHeight로 맞추기
+        slides.forEach(slide => {
+            slide.style.height = `${maxHeight}px`;
+        });
+    }
+
+    // 페이지 로드 후 실행
+    window.addEventListener('load', matchSlideHeights);
+    // swiper 업데이트 시도 될 수도 있으니 resize나 swiper 이벤트에도 추가하면 좋아
+    window.addEventListener('resize', matchSlideHeights);
+
     $('.accordion-header').on('click', function () {
         // $('.accordion-content').slideUp();
         // $('.accordion-header').not(this).removeClass('active');
