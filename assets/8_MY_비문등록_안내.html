@@ -26,35 +26,60 @@
         </header>
         <!-- END : Header -->
 
-        <main class="main gray">
+        <main class="main">
             <section class="container">
                 <div class="test-info-area">
-                    <div class="swiper test-info-swiper">
+                    <div class="swiper noseprint-info-swiper">
                         <div class="swiper-wrapper">
-                            <!-- 내부 이미지 미전달 임시 이미지 적용 -->
                             <div class="swiper-slide">
-                                <img src="img/sample/sample-01.png" alt="등록안내 이미지 01">
+                                <div class="test-slide-img">
+                                    <img src="img/sub/test-04.svg" alt="주변 조명을 확인해주세요">
+                                </div>
+                                <div class="test-slide-text">
+                                    <h2>주변 조명을 확인해주세요</h2>
+                                    <h6>밝고 균일한 조명에서 촬영하면 더욱<br>
+                                        정확하게 등록할 수 있어요. 너무 어둡거나<br>
+                                        강한 빛이 반사되는 곳은 피해주세요</h6>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="img/sample/sample-01.png" alt="등록안내 이미지 02">
+                                <div class="test-slide-img">
+                                    <img src="img/sub/test-05.svg" alt="얼굴 상태를 확인해주세요">
+                                </div>
+                                <div class="test-slide-text">
+                                    <h2>얼굴 상태를 확인해주세요</h2>
+                                    <h6>비문이 잘 보일 수 있도록 털을<br>
+                                        살짝 정리해 주시고, 빛 반사로<br>
+                                        흐려지지 않도록 주의해주세요</h6>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="img/sample/sample-01.png" alt="등록안내 이미지 03">
+                                <div class="test-slide-img">
+                                    <img src="img/sub/test-06.svg" alt="정면에서 촬영해주세요">
+                                </div>
+                                <div class="test-slide-text">
+                                    <h2>정면에서 촬영해주세요</h2>
+                                    <h6>반려동물의 코가 정면에서<br>
+                                        또렷하게 보이도록 가까이서 찍어주세요<br>
+                                        초점이 맞춰져 있으면 더욱 좋아요!</h6>
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <!-- <div class="swiper-pagination"></div> -->
+                        <div class="swiper-button-next nose-swiper-next"></div>
+                        <div class="swiper-button-prev nose-swiper-prev"></div>
                     </div>
                 </div>
             </section>
             <section class="section-bottom">
-                <div class="check-group">
+                <div class="check-group dismiss-check">
                     <input type="checkbox" id="chk">
                     <label for="chk">
                         <span class="text">다시 보지 않기</span>
                     </label>
                 </div>
                 <section class="btn-group bottom btn-space-xxs last">
-                    <button type="button" class="btn btn-none btn-lg" disabled>이전</button>
+                    <button type="button" class="btn btn-none btn-lg btn-prev">이전</button>
                     <button type="button" class="btn btn-primary btn-lg btn-next">다음</button>
                 </section>
             </section>

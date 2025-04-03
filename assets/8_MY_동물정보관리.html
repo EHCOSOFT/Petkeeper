@@ -141,13 +141,65 @@
                     <div class="profile-cont">
                         <h2>반려동물 정보 관리</h2>
                         <ul>
-                            <li><a href="">대표 반려동물로 설정</a></li>
+                            <li><a href="javascript:void(0);" class="open-modal" data-modal-id="alertModal01">대표 반려동물로 설정</a></li>
                             <li><a href="">비문 변경 등록하기</a></li>
                             <li><a href="">분실 신고하기</a></li>
                             <li><a href="">반려동물 정보 수정</a></li>
                             <li><a href="">반려동물 삭제</a></li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 대표등록 불가 -->
+    <div class="modal-wrap" id="alertModal01">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-alert">
+                        <h6>대표동물 등록은 가입일 기준 익월<br>변경 가능(월 1
+                            회),<br>반영은 익익월 반영됩니다.
+                            </h6>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-lg btn-modal-close">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 대표등록 가능, 비문등록 완료 -->
+    <div class="modal-wrap" id="alertModal02">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-alert">
+                        <h6>대표동물 변경내용은<br>익익월 반영됩니다.</h6>
+                    </div>
+                </div>
+                <div class="modal-footer btn-group btn-space-xxs last">
+                    <button type="button" class="btn btn-lightgray btn-lg btn-modal-close">취소</button>
+                    <button type="button" class="btn btn-primary btn-lg">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 대표등록 가능, 비문등록 미등록 -->
+    <div class="modal-wrap" id="alertModal03">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-alert">
+                        <h6>비문등록 이후<br>대표 동물등록을 할 수 있어요</h6>
+                    </div>
+                </div>
+                <div class="modal-footer btn-group btn-space-xxs last">
+                    <button type="button" class="btn btn-lightgray btn-lg btn-modal-close">취소</button>
+                    <button type="button" class="btn btn-primary btn-lg">확인</button>
                 </div>
             </div>
         </div>

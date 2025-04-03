@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- START : Header -->
+        <header class="header">
+            <div class="container">
+                <h3 class="header-title">보상신청</h3>
+                <a href="#" class="header-close">
+                    <img src="img/ico/i-header-close.svg" alt="닫기">
+                </a>
+            </div>
+        </header>
+        <!-- END : Header -->
+
+        <main class="main">
+            <section class="container">
+                <div class="reg-area">
+                    <div class="reg-title-group">
+                        <h1>보상 신청 정보를 입력해주세요</h1>
+                        <h6>반려동물 분실 시 발생한 비용에 대해<br>
+                            실제 지출한 금액을 보상해 드려요.</h6>
+                    </div>
+                    <div class="input-wrap">
+                        <div class="pet-group">
+                            <h6>반려동물 정보</h6>
+                            <div class="check-profile">
+                                <div class="profile sm">
+                                    <div class="cat"></div>
+                                </div>
+                                <div class="profile-info">
+                                    <h5>멍멍이이름이너무너무너무길어요</h5>
+                                    <p>그레이트 피레니즈</p>
+                                    <p>123456789012345(중성화 완료)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filming-group error">
+                            <h6>영수증 이미지</h6>
+                            <div class="epitaph-filming">
+                                <div class="filming" style="background: url(img/sample/cat-sample.jpg);"></div>
+                                <div class="filming">
+                                    <button type="button" class="btn-camera open-modal" data-modal-id="profileModal">
+                                        <img src="img/ico/i-camera.svg" alt="촬영">
+                                    </button>
+                                </div>
+                                <div class="filming">
+                                    <button type="button" class="btn-camera open-modal" data-modal-id="profileModal">
+                                        <img src="img/ico/i-camera.svg" alt="촬영">
+                                    </button>
+                                </div>
+                            </div>
+                            <small>값이 입력 및 선택되지 않았습니다.</small>
+                        </div>
+                        <div class="select-group">
+                            <label for="">보상금 수령계좌<span>*</span></label>
+                            <div class="select-group-field">
+                                <div class="select-group-field">
+                                    <select name="" id="">
+                                        <option value="1">금융기관을 선택해주세요.</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label for="" class="d-none">계좌번호<span>*</span></label>
+                                    <div class="input-group-field">
+                                        <input type="text" value="" placeholder="계좌번호를 입력해 주세요(-없이 입력)">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="btn-group bottom fixed">
+                <button type="button" class="btn btn-primary btn-lg">분실 보상 지원 신청</button>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-wrap modal-bottom-sheet slide-up" id="profileModal">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-topbar"></div>
+                <div class="modal-body">
+                    <div class="profile-cont">
+                        <h2>사진</h2>
+                        <ul>
+                            <li><a href="">사진찍기</a></li>
+                            <li><a href="">사진앨범</a></li>
+                            <li><a href="">사진삭제</a></li>
+                            <li><a href="" class="btn-modal-close">취소</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

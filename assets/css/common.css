@@ -1869,3 +1869,35 @@ progress {
     font-weight: var(--font-500-medium);
     line-height: 20px;
 }
+
+/* **************************************** *
+ * animate 
+ * **************************************** */
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.float-up-down {
+    animation: floatMotion 2.5s ease-in-out infinite;
+}
+
+@keyframes floatMotion {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

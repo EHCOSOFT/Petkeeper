@@ -239,53 +239,94 @@ $(document).ready(function () {
         pagination: {
             el: ".swiper-pagination",
         },
+        navigation: {
+            nextEl: ".test-swiper-next",
+            prevEl: ".test-swiper-prev",
+        },
         allowTouchMove: false,
     });
 
-    // 버튼 요소 가져오기
-    const $btnNext = document.querySelector(".btn-next");
-    const $btnPrev = document.querySelector(".btn-prev");
-    const $checkGroup = document.querySelector(".check-group");
-
-    // 이전 버튼 비활성화 (초기 상태)
-    if ($btnPrev) $btnPrev.disabled = true;
-
-    // 다음 버튼 클릭 이벤트
-    $btnNext.addEventListener("click", () => {
-        if (testInfoSwiper.activeIndex < testInfoSwiper.slides.length - 1) {
-            testInfoSwiper.slideNext();
-        }
-
-        updateButtons(); // 버튼 상태 업데이트
+    const noserprintInfoSwiper = new Swiper(".noseprint-info-swiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        navigation: {
+            nextEl: ".nose-swiper-next",
+            prevEl: ".nose-swiper-prev",
+        },
+        allowTouchMove: false,
     });
 
-    // 이전 버튼 클릭 이벤트
-    if ($btnPrev) {
-        $btnPrev.addEventListener("click", () => {
-            testInfoSwiper.slidePrev();
-            updateButtons(); // 버튼 상태 업데이트
-        });
+    const swipers = [
+        testInfoSwiper,
+        noserprintInfoSwiper,
+    ];
+
+    const $btnNext = $(".btn-next");
+    const $btnPrev = $(".btn-prev");
+    const $checkGroup = $(".dismiss-check");
+
+    // 초기 버튼 상태
+    $btnPrev.prop("disabled", true);
+
+    // ✅ 현재 보이는 Swiper 찾기
+    function getVisibleSwiper() {
+        for (const swiper of swipers) {
+            const $el = $(swiper.el);
+            if ($el.is(":visible")) {
+                return swiper;
+            }
+        }
+        return null;
     }
 
-    // 버튼 상태 업데이트 함수
-    function updateButtons() {
-        // 현재 인덱스 가져오기
-        const currentIndex = testInfoSwiper.activeIndex;
-        const totalSlides = testInfoSwiper.slides.length;
+    // 공통 버튼 이벤트
+    $btnNext.on("click", function () {
+        const swiper = getVisibleSwiper();
+        if (!swiper) return;
 
-        // 첫 번째 슬라이드면 이전 버튼 비활성화, 아니면 활성화
-        if ($btnPrev) {
-            $btnPrev.disabled = currentIndex === 0;
+        const currentIndex = swiper.activeIndex;
+        const totalSlides = swiper.slides.length;
+
+        if (currentIndex < totalSlides - 1) {
+            // 일반 슬라이드 이동
+            swiper.slideNext();
+            updateButtons(swiper);
+        } else {
+            // 마지막 슬라이드일 때: 페이지 이동
+            window.location.href = "/your-next-page"; // 원하는 링크로 변경!
         }
+    });
 
-        // 마지막 슬라이드면 체크박스 보이게 처리
-        if ($checkGroup) {
-            $checkGroup.style.display = currentIndex === totalSlides - 1 ? "block" : "none";
+    $btnPrev.on("click", function () {
+        const swiper = getVisibleSwiper();
+        if (!swiper) return;
+
+        swiper.slidePrev();
+        updateButtons(swiper);
+    });
+
+    function updateButtons(swiper) {
+        const currentIndex = swiper.activeIndex;
+        const totalSlides = swiper.slides.length;
+
+        // 이전 버튼은 여전히 제어
+        $btnPrev.prop("disabled", currentIndex === 0);
+
+        // 다음 버튼은 마지막 슬라이드여도 활성 상태 유지
+        $btnNext.prop("disabled", false);
+
+        // 체크박스는 여전히 마지막 슬라이드일 때만 표시
+        if ($checkGroup.length) {
+            $checkGroup.css("display", currentIndex === totalSlides - 1 ? "block" : "none");
         }
     }
+    // 초기 상태 설정
+    const firstSwiper = getVisibleSwiper();
+    if (firstSwiper) {
+        updateButtons(firstSwiper);
+    }
 
-    // 초기 버튼 상태 설정
-    updateButtons();
 
     // tab
     $(".tab-link").click(function () {
@@ -398,5 +439,25 @@ $(document).ready(function () {
             // 실패 시 오류 처리 (선택 사항)
             console.error('쿠폰 번호 복사 실패:', err);
         });
+    });
+
+    // 애니메이션
+    function animateElements() {
+        $(".fade-up").each(function () { // 특정 ID만 선택
+            var elementTop = $(this).offset().top;  // 요소의 위치
+            var windowBottom = $(window).scrollTop() + $(window).height(); // 현재 스크롤 위치
+
+            if (windowBottom > elementTop + 100) { // 요소가 화면에 보이면
+                $(this).addClass("show"); // 애니메이션 추가
+            }
+        });
+    }
+
+    // 초기 실행
+    animateElements();
+
+    // 스크롤할 때마다 실행
+    $(window).scroll(function () {
+        animateElements();
     });
 });
