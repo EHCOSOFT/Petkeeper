@@ -460,4 +460,12 @@ $(document).ready(function () {
     $(window).scroll(function () {
         animateElements();
     });
+
+    // 20250529 글자 수 제한 처리
+    $(".pet-name").each(function () {
+        const text = $(this).text();
+        if (text.length > 9) {
+            $(this).text(text.slice(0, 9) + "...");
+        }
+    });
 });

@@ -878,6 +878,8 @@
     position: absolute;
     top: 0;
     width: 100%;
+    -webkit-backdrop-filter: blur(10px);
+    /* ✅ iOS 대응용 */
 }
 
 .main-result .result .blur h6 {
@@ -1154,6 +1156,18 @@
 
 .ai-counsel-title a>img {
     width: max-content;
+}
+
+.ai-counsel-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8-xxs);
+}
+
+.ai-counsel-group h6 {
+    color: var(--color-181F27-balck);
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-500-medium);
 }
 
 .ai-counsel-list {
@@ -3147,7 +3161,7 @@
 .my-pet-area {
     display: flex;
     flex-direction: column;
-    margin: 0 0 var(--space-24-lg) 0;
+    margin: var(--space-4-min) 0 var(--space-24-lg) 0;
     gap: var(--space-24-lg);
 }
 
@@ -3557,11 +3571,15 @@
     border-radius: var(--radius-8-sm);
     display: flex;
     padding: var(--space-16-sm);
-    gap: var(--space-8-xxs);
 }
 
 .my-intro-cont ul li {
     flex: 1;
+    width: calc((100% - 44%) / 2);
+}
+
+.my-intro-cont ul li:first-child {
+    width: 44%;
 }
 
 .my-intro-cont ul li dl {
@@ -3595,7 +3613,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: calc(100% - 2px);
+    width: 100%;
 }
 
 .my-intro-cont ul li dd a.add-pet {
