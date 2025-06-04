@@ -368,7 +368,7 @@ button:not(:disabled) {
     flex-direction: column;
     flex: 1;
     min-height: 100%;
-    padding: var(--header-56-height) 0 0 0;
+    /* padding: var(--header-56-height) 0 0 0; */
 }
 
 .main.gray {
@@ -409,11 +409,12 @@ button:not(:disabled) {
     left: 16px;
 }
 
-.header .header-title {
+.header-title {
     color: var(--color-181F27-balck);
     font-size: var(--font-18-lg);
     font-weight: var(--font-700-bold);
     line-height: 24px;
+    margin: 0 0 var(--space-8-xxs) 0;
 }
 
 .header .header-close {
