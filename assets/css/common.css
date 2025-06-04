@@ -449,6 +449,23 @@ button:not(:disabled) {
     color: var(--color-ffffff-white);
 }
 
+.header-relative {
+    background: none;
+    margin: 0 0 -56px 0;
+    position: relative;
+}
+
+.header.header-relative .container {
+    justify-content: flex-end;
+}
+
+.header.header-relative .header-my {
+    color: var(--color-ffffff-white);
+    padding: 0;
+    position: relative;
+    right: unset;
+}
+
 /* **************************************** *
  * Footer
  * **************************************** */
