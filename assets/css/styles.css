@@ -4384,3 +4384,14 @@
     line-height: 20px;
     list-style: disc;
 }
+
+.event img {
+    width: 100%;
+}
+
+img[usemap] {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}

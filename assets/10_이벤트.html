@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Petkeeper</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <section class="event">
+            <img src="img/event/20250627_event.png" alt="" usemap="#eventmap">
+            <map name="eventmap">
+                <area shape="rect" coords="443,1648,1707,1986" href="https://www.naver.com" alt="펫키퍼 바로가기">
+            </map>
+        </section>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="lib/imageMapResizer.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            imageMapResize(); // 좌표 자동 조절
+        });
+    </script>
+</body>
+
+</html>
